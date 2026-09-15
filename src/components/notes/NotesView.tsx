@@ -329,6 +329,7 @@ export const NotesView: React.FC<NotesViewProps> = ({
                         onClick={() => openEditModal(note)}
                         className="w-7 h-7 rounded-lg hover:bg-slate-100 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-colors"
                         title="Chỉnh sửa ghi chú"
+                        aria-label="Chỉnh sửa ghi chú"
                       >
                         <Edit3 className="w-3.5 h-3.5" />
                       </button>
@@ -337,6 +338,7 @@ export const NotesView: React.FC<NotesViewProps> = ({
                         onClick={() => handleDelete(note.id)}
                         className="w-7 h-7 rounded-lg hover:bg-rose-50 text-slate-400 hover:text-rose-600 flex items-center justify-center transition-colors"
                         title="Xóa ghi chú"
+                        aria-label="Xóa ghi chú"
                       >
                         <Trash2 className="w-3.5 h-3.5" />
                       </button>

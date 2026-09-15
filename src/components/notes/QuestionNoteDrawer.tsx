@@ -144,6 +144,8 @@ export const QuestionNoteDrawer: React.FC<QuestionNoteDrawerProps> = ({
           <button
             type="button"
             onClick={onClose}
+            title="Đóng"
+            aria-label="Đóng"
             className="w-8 h-8 rounded-xl hover:bg-slate-200 text-slate-500 flex items-center justify-center transition-colors"
           >
             <X className="w-4 h-4" />

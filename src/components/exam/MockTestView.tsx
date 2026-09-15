@@ -406,6 +406,7 @@ export const MockTestView: React.FC<MockTestViewProps> = ({
                 type="button"
                 onClick={clearPersistedSession}
                 title="Bỏ bài đang dở, bắt đầu mới"
+                aria-label="Bỏ bài đang dở, bắt đầu mới"
                 className="p-2 rounded-xl border border-amber-300 text-amber-700 hover:bg-amber-100 transition-all"
               >
                 <X className="w-4 h-4" />
@@ -608,6 +609,7 @@ export const MockTestView: React.FC<MockTestViewProps> = ({
                 onClick={() => setIsTimerPaused(prev => !prev)}
                 className="ml-1 text-slate-400 hover:text-slate-700 p-0.5 rounded"
                 title={isTimerPaused ? 'Tiếp tục tính giờ' : 'Tạm dừng tính giờ'}
+                aria-label={isTimerPaused ? 'Tiếp tục tính giờ' : 'Tạm dừng tính giờ'}
               >
                 {isTimerPaused ? <Play className="w-3 h-3" /> : <Pause className="w-3 h-3" />}
               </button>

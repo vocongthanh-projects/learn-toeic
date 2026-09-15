@@ -129,6 +129,67 @@ export function detectPart5FormRequirement(q: Question): FormRequirement | null 
   return requirement;
 }
 
+// ==========================================
+// CONNECTOR CLASSIFIER (conjunction vs preposition vs conjunctive adverb, for Part 5)
+// ==========================================
+// Only unambiguous connectors — words like "before"/"since"/"after" that can be either a
+// preposition or a conjunction depending on context are deliberately left out here (they're
+// already handled by the verb-form/gerund detector above) to avoid a wrong classification.
+const SUBORDINATING_CONJUNCTIONS = new Set([
+  'although', 'though', 'even though', 'even if', 'because', 'while', 'whereas',
+  'unless', 'if', 'when', 'provided that', 'so that', 'in order that', 'as long as'
+]);
+const REASON_CONTRAST_PREPOSITIONS = new Set([
+  'because of', 'due to', 'owing to', 'despite', 'in spite of', 'notwithstanding',
+  'without', 'instead of', 'according to'
+]);
+const CONJUNCTIVE_ADVERBS = new Set([
+  'however', 'therefore', 'moreover', 'nevertheless', 'furthermore', 'thus',
+  'consequently', 'otherwise', 'meanwhile', 'nonetheless', 'additionally',
+  'accordingly', 'likewise', 'subsequently', 'hence'
+]);
+const COORDINATING_CONJUNCTIONS = new Set(['and', 'but', 'or', 'so', 'yet', 'nor']);
+
+type ConnectorCategory = 'subordinating-conjunction' | 'reason-contrast-preposition' | 'conjunctive-adverb' | 'coordinating-conjunction' | 'unknown';
+
+function classifyConnector(word: string): { category: ConnectorCategory; label: string } {
+  const w = word.trim().toLowerCase();
+  if (SUBORDINATING_CONJUNCTIONS.has(w)) {
+    return { category: 'subordinating-conjunction', label: 'liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: "..., S + V")' };
+  }
+  if (REASON_CONTRAST_PREPOSITIONS.has(w)) {
+    return { category: 'reason-contrast-preposition', label: 'giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ)' };
+  }
+  if (CONJUNCTIVE_ADVERBS.has(w)) {
+    return { category: 'conjunctive-adverb', label: 'trạng từ liên kết (đứng đầu câu độc lập hoặc sau dấu chấm/chấm phẩy, không tự nối trực tiếp 2 mệnh đề bằng dấu phẩy)' };
+  }
+  if (COORDINATING_CONJUNCTIONS.has(w)) {
+    return { category: 'coordinating-conjunction', label: 'liên từ kết hợp (nối 2 mệnh đề/cụm từ ngang hàng)' };
+  }
+  return { category: 'unknown', label: '' };
+}
+
+// Detects a Part 5 "logical connector" question (conjunction vs preposition vs conjunctive
+// adverb) by classifying the correct answer's own word, then only trusts it when at least one
+// option falls into a genuinely different, unambiguous category — so it never guesses.
+export function detectPart5ConnectorContrast(q: Question): { category: ConnectorCategory; label: string } | null {
+  if (q.part !== 5 || !q.options || q.options.length < 2) return null;
+
+  const correctOpt = q.options.find(o => o.key === q.correctAnswer);
+  if (!correctOpt) return null;
+
+  const correctInfo = classifyConnector(correctOpt.text);
+  if (correctInfo.category === 'unknown') return null;
+
+  const distinctCategories = new Set(q.options.map(o => classifyConnector(o.text).category));
+  distinctCategories.delete('unknown');
+  if (distinctCategories.size < 2) return null;
+
+  return correctInfo;
+}
+
+export { classifyConnector };
+
 // Suffix helper to detect part of speech
 function guessPosFromSuffix(word: string): string {
   const w = word.toLowerCase().trim();
@@ -355,6 +416,24 @@ export function getDeepGrammarBreakdown(q: Question): string {
 
 🎯 Quy tắc ngữ pháp:
 ${formReq.reason}
+
+💡 Phân tích từng phương án:
+${optionLines}`;
+    }
+
+    // 4b. Connector contrast (conjunction vs preposition vs conjunctive adverb)
+    const connectorReq = detectPart5ConnectorContrast(q);
+    if (connectorReq) {
+      const optionLines = q.options.map(o => {
+        const info = classifyConnector(o.text);
+        const mark = o.key === q.correctAnswer ? '✅ Đáp án đúng' : '❌ Loại';
+        const label = info.category === 'unknown' ? 'không thuộc nhóm liên từ/giới từ/trạng từ liên kết phổ biến' : info.label;
+        return `- [${o.key}] "${o.text}" → ${label} ${mark}`;
+      }).join('\n');
+      return `📌 Câu: "${qText.replace(BLANK_MARKER_RE, '[...]')}"
+
+🎯 Quy tắc ngữ pháp:
+Đáp án đúng [${q.correctAnswer}] ("${correctWord}") là ${connectorReq.label}. Muốn chọn đúng loại từ nối, hãy xem vế còn lại của câu là một MỆNH ĐỀ đầy đủ (có chủ ngữ + động từ) hay chỉ là một CỤM TỪ/danh từ.
 
 💡 Phân tích từng phương án:
 ${optionLines}`;

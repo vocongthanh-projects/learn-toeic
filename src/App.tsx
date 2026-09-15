@@ -1,17 +1,28 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db, seedSampleDataIfEmpty, DEFAULT_PROFILES, renameUserProfile, exportDatabase, importDatabase, type DatabaseBackup } from './db';
 import type { ViewMode, UserProfile } from './types';
 
 import { SAMPLE_QUESTIONS } from './data/questions';
 import { Header } from './components/layout/Header';
-import { DashboardView } from './components/dashboard/DashboardView';
-import { KnowledgeView } from './components/knowledge/KnowledgeView';
-import { PracticeView } from './components/practice/PracticeView';
-import { MistakeBankView } from './components/mistakes/MistakeBankView';
-import { VocabularyView } from './components/vocabulary/VocabularyView';
-import { MockTestView } from './components/exam/MockTestView';
-import { NotesView } from './components/notes/NotesView';
+
+// Each tab is loaded on demand, so switching views doesn't require downloading
+// every other view's code up front.
+const DashboardView = lazy(() => import('./components/dashboard/DashboardView').then(m => ({ default: m.DashboardView })));
+const KnowledgeView = lazy(() => import('./components/knowledge/KnowledgeView').then(m => ({ default: m.KnowledgeView })));
+const PracticeView = lazy(() => import('./components/practice/PracticeView').then(m => ({ default: m.PracticeView })));
+const MistakeBankView = lazy(() => import('./components/mistakes/MistakeBankView').then(m => ({ default: m.MistakeBankView })));
+const VocabularyView = lazy(() => import('./components/vocabulary/VocabularyView').then(m => ({ default: m.VocabularyView })));
+const MockTestView = lazy(() => import('./components/exam/MockTestView').then(m => ({ default: m.MockTestView })));
+const NotesView = lazy(() => import('./components/notes/NotesView').then(m => ({ default: m.NotesView })));
+
+function ViewLoadingFallback() {
+  return (
+    <div className="flex items-center justify-center py-24">
+      <div className="w-8 h-8 border-4 border-slate-200 border-t-blue-600 rounded-full animate-spin" />
+    </div>
+  );
+}
 
 const LOCAL_STORAGE_USER_KEY = 'toeic_active_user_id';
 const LOCAL_STORAGE_VIEW_KEY = 'toeic_active_view';
@@ -198,6 +209,7 @@ export function App() {
 
       {/* Main Content Area */}
       <main className="flex-1 pb-16">
+        <Suspense fallback={<ViewLoadingFallback />}>
         {currentView === 'dashboard' && (
           <DashboardView
             userName={activeProfile.name}
@@ -266,6 +278,7 @@ export function App() {
             onStartDrill={handleStartDrill}
           />
         )}
+        </Suspense>
       </main>
 
       {/* Footer */}

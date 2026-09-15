@@ -173,6 +173,7 @@ export const VocabularyView: React.FC<VocabularyViewProps> = ({
                       <button
                         onClick={() => deleteVocabularyWord(item.id)}
                         title="Xóa từ"
+                        aria-label="Xóa từ"
                         className="p-1 text-slate-400 hover:text-rose-600 transition-colors"
                       >
                         <Trash2 className="w-3.5 h-3.5" />

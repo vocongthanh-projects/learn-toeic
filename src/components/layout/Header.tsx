@@ -258,6 +258,7 @@ export const Header: React.FC<HeaderProps> = ({
                             <button
                               onClick={() => startEditingProfile(p)}
                               title="Đổi tên hồ sơ"
+                              aria-label="Đổi tên hồ sơ"
                               className="p-1 rounded-lg text-slate-400 opacity-0 group-hover:opacity-100 hover:bg-slate-100 hover:text-slate-700 transition-opacity"
                             >
                               <Pencil className="w-3 h-3" />

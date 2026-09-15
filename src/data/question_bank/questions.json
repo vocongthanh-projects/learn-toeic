@@ -485,14 +485,14 @@
     ],
     "explanation": {
       "translation": "Mặc dù việc cải tạo mất nhiều thời gian hơn dự định nhưng nhà hàng đã mở cửa trở lại đúng tiến độ.",
-      "grammarBreakdown": "📌 Phân tích ngữ pháp:\nCăn cứ vào cấu trúc ngữ pháp trước và sau chỗ trống, phương án [A] (\"Although\") là từ loại và cấu trúc phù hợp nhất để hoàn thành câu đúng ngữ pháp và ngữ nghĩa thương mại.",
+      "grammarBreakdown": "📌 Câu: \"[...] the renovation took longer than planned, the restaurant reopened on schedule.\"\n\n🎯 Quy tắc ngữ pháp:\nĐáp án đúng [A] (\"Although\") là liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\"). Muốn chọn đúng loại từ nối, hãy xem vế còn lại của câu là một MỆNH ĐỀ đầy đủ (có chủ ngữ + động từ) hay chỉ là một CỤM TỪ/danh từ.\n\n💡 Phân tích từng phương án:\n- [A] \"Although\" → liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\") ✅ Đáp án đúng\n- [B] \"Because\" → liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\") ❌ Loại\n- [C] \"Therefore\" → trạng từ liên kết (đứng đầu câu độc lập hoặc sau dấu chấm/chấm phẩy, không tự nối trực tiếp 2 mệnh đề bằng dấu phẩy) ❌ Loại\n- [D] \"Whether\" → không thuộc nhóm liên từ/giới từ/trạng từ liên kết phổ biến ❌ Loại",
       "distractors": {
-        "B": "Phương án (B) \"Because\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "Phương án (C) \"Therefore\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "D": "Phương án (D) \"Whether\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation)."
+        "B": "Phương án (B) \"Because\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"Although\" trong câu này.",
+        "C": "\"Therefore\" là trạng từ liên kết (đứng đầu câu độc lập hoặc sau dấu chấm/chấm phẩy, không tự nối trực tiếp 2 mệnh đề bằng dấu phẩy), khác loại với đáp án đúng \"Although\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này.",
+        "D": "Phương án (D) \"Whether\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"Although\" trong câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [],
       "keyVocabulary": [
         {
@@ -1647,14 +1647,14 @@
     ],
     "explanation": {
       "translation": "Công ty đã lắp đặt thêm hệ thống chiếu sáng để khu vực đỗ xe an toàn hơn vào ban đêm.",
-      "grammarBreakdown": "📌 Phân tích ngữ pháp:\nCăn cứ vào cấu trúc ngữ pháp trước và sau chỗ trống, phương án [A] (\"so that\") là từ loại và cấu trúc phù hợp nhất để hoàn thành câu đúng ngữ pháp và ngữ nghĩa thương mại.",
+      "grammarBreakdown": "📌 Câu: \"The company installed additional lighting [...] the parking area would be safer at night.\"\n\n🎯 Quy tắc ngữ pháp:\nĐáp án đúng [A] (\"so that\") là liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\"). Muốn chọn đúng loại từ nối, hãy xem vế còn lại của câu là một MỆNH ĐỀ đầy đủ (có chủ ngữ + động từ) hay chỉ là một CỤM TỪ/danh từ.\n\n💡 Phân tích từng phương án:\n- [A] \"so that\" → liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\") ✅ Đáp án đúng\n- [B] \"in order to\" → không thuộc nhóm liên từ/giới từ/trạng từ liên kết phổ biến ❌ Loại\n- [C] \"due to\" → giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ) ❌ Loại\n- [D] \"as well as\" → không thuộc nhóm liên từ/giới từ/trạng từ liên kết phổ biến ❌ Loại",
       "distractors": {
-        "B": "Phương án (B) \"in order to\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "Phương án (C) \"due to\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "D": "\"as well as\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này."
+        "B": "Phương án (B) \"in order to\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"so that\" trong câu này.",
+        "C": "\"due to\" là giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ), khác loại với đáp án đúng \"so that\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này.",
+        "D": "Phương án (D) \"as well as\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"so that\" trong câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [],
       "keyVocabulary": [
         {
@@ -13926,14 +13926,14 @@
     ],
     "explanation": {
       "translation": "Mặc dù xe chở hàng bị cản trở do công trường đang thi công nhưng vắc xin vẫn đến được trong phạm vi nhiệt độ yêu cầu.",
-      "grammarBreakdown": "📌 Phân tích ngữ pháp:\nCăn cứ vào cấu trúc ngữ pháp trước và sau chỗ trống, phương án [C] (\"Although\") là từ loại và cấu trúc phù hợp nhất để hoàn thành câu đúng ngữ pháp và ngữ nghĩa thương mại.",
+      "grammarBreakdown": "📌 Câu: \"[...] the delivery van was held up by roadworks, the vaccines arrived within the required temperature range.\"\n\n🎯 Quy tắc ngữ pháp:\nĐáp án đúng [C] (\"Although\") là liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\"). Muốn chọn đúng loại từ nối, hãy xem vế còn lại của câu là một MỆNH ĐỀ đầy đủ (có chủ ngữ + động từ) hay chỉ là một CỤM TỪ/danh từ.\n\n💡 Phân tích từng phương án:\n- [A] \"Because\" → liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\") ❌ Loại\n- [B] \"Despite\" → giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ) ❌ Loại\n- [C] \"Although\" → liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\") ✅ Đáp án đúng\n- [D] \"Therefore\" → trạng từ liên kết (đứng đầu câu độc lập hoặc sau dấu chấm/chấm phẩy, không tự nối trực tiếp 2 mệnh đề bằng dấu phẩy) ❌ Loại",
       "distractors": {
-        "A": "Phương án (A) \"Because\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "B": "Phương án (B) \"Despite\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "D": "Phương án (D) \"Therefore\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation)."
+        "A": "Phương án (A) \"Because\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"Although\" trong câu này.",
+        "B": "\"Despite\" là giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ), khác loại với đáp án đúng \"Although\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này.",
+        "D": "\"Therefore\" là trạng từ liên kết (đứng đầu câu độc lập hoặc sau dấu chấm/chấm phẩy, không tự nối trực tiếp 2 mệnh đề bằng dấu phẩy), khác loại với đáp án đúng \"Although\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [],
       "keyVocabulary": [
         {
@@ -20843,14 +20843,14 @@
     ],
     "explanation": {
       "translation": "Mặc dù hợp đồng thủy lợi được ký muộn nhưng các lô thí điểm vẫn được trồng đúng tiến độ.",
-      "grammarBreakdown": "📌 Phân tích ngữ pháp:\nCăn cứ vào cấu trúc ngữ pháp trước và sau chỗ trống, phương án [A] (\"Although\") là từ loại và cấu trúc phù hợp nhất để hoàn thành câu đúng ngữ pháp và ngữ nghĩa thương mại.",
+      "grammarBreakdown": "📌 Câu: \"[...] the irrigation contract was signed late, the pilot plots were planted on schedule.\"\n\n🎯 Quy tắc ngữ pháp:\nĐáp án đúng [A] (\"Although\") là liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\"). Muốn chọn đúng loại từ nối, hãy xem vế còn lại của câu là một MỆNH ĐỀ đầy đủ (có chủ ngữ + động từ) hay chỉ là một CỤM TỪ/danh từ.\n\n💡 Phân tích từng phương án:\n- [A] \"Although\" → liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\") ✅ Đáp án đúng\n- [B] \"Despite\" → giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ) ❌ Loại\n- [C] \"However\" → trạng từ liên kết (đứng đầu câu độc lập hoặc sau dấu chấm/chấm phẩy, không tự nối trực tiếp 2 mệnh đề bằng dấu phẩy) ❌ Loại\n- [D] \"Because\" → liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\") ❌ Loại",
       "distractors": {
-        "B": "Phương án (B) \"Despite\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "Phương án (C) \"However\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "D": "Phương án (D) \"Because\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation)."
+        "B": "\"Despite\" là giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ), khác loại với đáp án đúng \"Although\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này.",
+        "C": "\"However\" là trạng từ liên kết (đứng đầu câu độc lập hoặc sau dấu chấm/chấm phẩy, không tự nối trực tiếp 2 mệnh đề bằng dấu phẩy), khác loại với đáp án đúng \"Although\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này.",
+        "D": "Phương án (D) \"Because\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"Although\" trong câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [],
       "keyVocabulary": [
         {
@@ -27440,14 +27440,14 @@
     ],
     "explanation": {
       "translation": "Mặc dù cơn bão đã làm hư hại ba trạm biến áp nhưng dịch vụ đã được khôi phục cho hầu hết khách hàng trong vòng một ngày.",
-      "grammarBreakdown": "📌 Phân tích ngữ pháp:\nCăn cứ vào cấu trúc ngữ pháp trước và sau chỗ trống, phương án [C] (\"Although\") là từ loại và cấu trúc phù hợp nhất để hoàn thành câu đúng ngữ pháp và ngữ nghĩa thương mại.",
+      "grammarBreakdown": "📌 Câu: \"[...] the storm damaged three substations, service was restored to most customers within a day.\"\n\n🎯 Quy tắc ngữ pháp:\nĐáp án đúng [C] (\"Although\") là liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\"). Muốn chọn đúng loại từ nối, hãy xem vế còn lại của câu là một MỆNH ĐỀ đầy đủ (có chủ ngữ + động từ) hay chỉ là một CỤM TỪ/danh từ.\n\n💡 Phân tích từng phương án:\n- [A] \"Despite\" → giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ) ❌ Loại\n- [B] \"Because of\" → giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ) ❌ Loại\n- [C] \"Although\" → liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\") ✅ Đáp án đúng\n- [D] \"Owing to\" → giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ) ❌ Loại",
       "distractors": {
-        "A": "Phương án (A) \"Despite\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "B": "Phương án (B) \"Because of\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "D": "Phương án (D) \"Owing to\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation)."
+        "A": "\"Despite\" là giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ), khác loại với đáp án đúng \"Although\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này.",
+        "B": "\"Because of\" là giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ), khác loại với đáp án đúng \"Although\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này.",
+        "D": "\"Owing to\" là giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ), khác loại với đáp án đúng \"Although\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [],
       "keyVocabulary": [
         {
@@ -33085,14 +33085,14 @@
     ],
     "explanation": {
       "translation": "Mặc dù đơn đăng ký phân vùng đã được nộp đúng hạn nhưng hội đồng sẽ không đưa ra phán quyết về việc này trước tháng 10.",
-      "grammarBreakdown": "📌 Phân tích ngữ pháp:\nCăn cứ vào cấu trúc ngữ pháp trước và sau chỗ trống, phương án [C] (\"Although\") là từ loại và cấu trúc phù hợp nhất để hoàn thành câu đúng ngữ pháp và ngữ nghĩa thương mại.",
+      "grammarBreakdown": "📌 Câu: \"[...] the zoning application was submitted on time, the council will not rule on it before October.\"\n\n🎯 Quy tắc ngữ pháp:\nĐáp án đúng [C] (\"Although\") là liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\"). Muốn chọn đúng loại từ nối, hãy xem vế còn lại của câu là một MỆNH ĐỀ đầy đủ (có chủ ngữ + động từ) hay chỉ là một CỤM TỪ/danh từ.\n\n💡 Phân tích từng phương án:\n- [A] \"Despite\" → giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ) ❌ Loại\n- [B] \"In spite of\" → giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ) ❌ Loại\n- [C] \"Although\" → liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\") ✅ Đáp án đúng\n- [D] \"Owing to\" → giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ) ❌ Loại",
       "distractors": {
-        "A": "Phương án (A) \"Despite\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "B": "Phương án (B) \"In spite of\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "D": "Phương án (D) \"Owing to\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation)."
+        "A": "\"Despite\" là giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ), khác loại với đáp án đúng \"Although\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này.",
+        "B": "\"In spite of\" là giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ), khác loại với đáp án đúng \"Although\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này.",
+        "D": "\"Owing to\" là giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ), khác loại với đáp án đúng \"Although\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [],
       "keyVocabulary": [
         {
@@ -39513,12 +39513,12 @@
       "translation": "Sự kiện ngoài trời đã bị hủy vì mưa lớn.",
       "grammarBreakdown": "Phương án [B] (\"because of\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "A": "Phương án (A) \"because\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "Phương án (C) \"although\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "D": "Phương án (D) \"despite\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation)."
+        "A": "\"because\" là liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\"), khác loại với đáp án đúng \"because of\" (giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ)) — không thể thay thế trong cấu trúc câu này.",
+        "C": "\"although\" là liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\"), khác loại với đáp án đúng \"because of\" (giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ)) — không thể thay thế trong cấu trúc câu này.",
+        "D": "Phương án (D) \"despite\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"because of\" trong câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [],
       "keyVocabulary": [
         {
@@ -39574,12 +39574,12 @@
       "translation": "Chi nhánh trung tâm thành phố sẽ vẫn mở, trong khi chi nhánh sân bay sẽ đóng cửa sớm.",
       "grammarBreakdown": "Phương án [A] (\"whereas\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "B": "\"unless\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này.",
-        "C": "Phương án (C) \"because\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "D": "Phương án (D) \"therefore\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation)."
+        "B": "Phương án (B) \"unless\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"whereas\" trong câu này.",
+        "C": "Phương án (C) \"because\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"whereas\" trong câu này.",
+        "D": "\"therefore\" là trạng từ liên kết (đứng đầu câu độc lập hoặc sau dấu chấm/chấm phẩy, không tự nối trực tiếp 2 mệnh đề bằng dấu phẩy), khác loại với đáp án đúng \"whereas\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [],
       "keyVocabulary": [
         {
@@ -39876,12 +39876,12 @@
       "translation": "Lô hàng sẽ đến đúng giờ trừ khi thời tiết trở nên khắc nghiệt.",
       "grammarBreakdown": "Phương án [B] (\"unless\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "A": "Phương án (A) \"if\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "Phương án (C) \"because\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "D": "Phương án (D) \"despite\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation)."
+        "A": "Phương án (A) \"if\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"unless\" trong câu này.",
+        "C": "Phương án (C) \"because\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"unless\" trong câu này.",
+        "D": "\"despite\" là giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ), khác loại với đáp án đúng \"unless\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [],
       "keyVocabulary": [
         {
@@ -39937,12 +39937,12 @@
       "translation": "Mặc dù có nhiều sự chậm trễ, dự án xây dựng đã được hoàn thành trong ngân sách.",
       "grammarBreakdown": "Phương án [B] (\"Despite\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "A": "Phương án (A) \"Although\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "Phương án (C) \"Because\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "D": "\"Unless\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này."
+        "A": "\"Although\" là liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\"), khác loại với đáp án đúng \"Despite\" (giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ)) — không thể thay thế trong cấu trúc câu này.",
+        "C": "\"Because\" là liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\"), khác loại với đáp án đúng \"Despite\" (giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ)) — không thể thay thế trong cấu trúc câu này.",
+        "D": "\"Unless\" là liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\"), khác loại với đáp án đúng \"Despite\" (giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ)) — không thể thay thế trong cấu trúc câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [],
       "keyVocabulary": [
         {
@@ -46151,12 +46151,12 @@
       "translation": "Theo dự báo thời tiết, bão sẽ đi qua vào buổi trưa.",
       "grammarBreakdown": "Phương án [A] (\"According to\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "B": "Phương án (B) \"Because\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "Phương án (C) \"In spite\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "D": "Phương án (D) \"Meanwhile\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation)."
+        "B": "\"Because\" là liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\"), khác loại với đáp án đúng \"According to\" (giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ)) — không thể thay thế trong cấu trúc câu này.",
+        "C": "Phương án (C) \"In spite\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"According to\" trong câu này.",
+        "D": "\"Meanwhile\" là trạng từ liên kết (đứng đầu câu độc lập hoặc sau dấu chấm/chấm phẩy, không tự nối trực tiếp 2 mệnh đề bằng dấu phẩy), khác loại với đáp án đúng \"According to\" (giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ)) — không thể thay thế trong cấu trúc câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [
         {
           "word": "According to",
@@ -47174,12 +47174,12 @@
       "translation": "Các hướng dẫn đã được viết lại để người dùng mới có thể hiểu chúng dễ dàng hơn.",
       "grammarBreakdown": "Phương án [A] (\"so that\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "B": "Phương án (B) \"because of\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "Phương án (C) \"even though\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "D": "Phương án (D) \"in case of\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation)."
+        "B": "\"because of\" là giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ), khác loại với đáp án đúng \"so that\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này.",
+        "C": "Phương án (C) \"even though\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"so that\" trong câu này.",
+        "D": "Phương án (D) \"in case of\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"so that\" trong câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [
         {
           "word": "so that",
@@ -54478,12 +54478,12 @@
       "translation": "Vui lòng thông báo cho nhân viên tiếp tân nếu bạn mong đợi có khách.",
       "grammarBreakdown": "Phương án [A] (\"if\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "B": "Phương án (B) \"despite\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "\"during\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này.",
-        "D": "Phương án (D) \"because of\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation)."
+        "B": "\"despite\" là giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ), khác loại với đáp án đúng \"if\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này.",
+        "C": "Phương án (C) \"during\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"if\" trong câu này.",
+        "D": "\"because of\" là giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ), khác loại với đáp án đúng \"if\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [],
       "keyVocabulary": [
         {
@@ -68023,12 +68023,12 @@
       "translation": "Mặc dù ước tính ban đầu thấp nhưng chi phí cuối cùng vẫn nằm trong ngân sách được phê duyệt.",
       "grammarBreakdown": "Phương án [A] (\"Even though\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "B": "Phương án (B) \"Because of\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "Phương án (C) \"In addition to\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "D": "Phương án (D) \"Provided that\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation)."
+        "B": "\"Because of\" là giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ), khác loại với đáp án đúng \"Even though\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này.",
+        "C": "Phương án (C) \"In addition to\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"Even though\" trong câu này.",
+        "D": "Phương án (D) \"Provided that\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"Even though\" trong câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [],
       "keyVocabulary": [
         {
@@ -68956,12 +68956,12 @@
       "translation": "Công việc xây dựng đã được hoàn thành bất chấp những hạn chế do ban bảo tồn lịch sử áp đặt.",
       "grammarBreakdown": "Phương án [A] (\"in spite of\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "B": "Phương án (B) \"because\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "\"whereas\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này.",
-        "D": "\"provided\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này."
+        "B": "\"because\" là liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\"), khác loại với đáp án đúng \"in spite of\" (giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ)) — không thể thay thế trong cấu trúc câu này.",
+        "C": "\"whereas\" là liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\"), khác loại với đáp án đúng \"in spite of\" (giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ)) — không thể thay thế trong cấu trúc câu này.",
+        "D": "Phương án (D) \"provided\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"in spite of\" trong câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [],
       "keyVocabulary": [
         {
@@ -70218,12 +70218,12 @@
       "translation": "Chuyến hàng đầu tiên đến muộn; do đó, lịch trình lắp đặt phải được điều chỉnh.",
       "grammarBreakdown": "Phương án [A] (\"therefore\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "B": "Phương án (B) \"although\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "Phương án (C) \"meanwhile\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "D": "Phương án (D) \"otherwise\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation)."
+        "B": "\"although\" là liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\"), khác loại với đáp án đúng \"therefore\" (trạng từ liên kết (đứng đầu câu độc lập hoặc sau dấu chấm/chấm phẩy, không tự nối trực tiếp 2 mệnh đề bằng dấu phẩy)) — không thể thay thế trong cấu trúc câu này.",
+        "C": "Phương án (C) \"meanwhile\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"therefore\" trong câu này.",
+        "D": "Phương án (D) \"otherwise\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"therefore\" trong câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [
         {
           "word": "therefore",
@@ -70693,12 +70693,12 @@
       "translation": "Trừ khi các bộ phận thay thế đến hôm nay, việc sửa chữa không thể hoàn thành trước thứ Sáu.",
       "grammarBreakdown": "Phương án [A] (\"Unless\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "B": "Phương án (B) \"Despite\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "Phương án (C) \"Because of\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "D": "\"During\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này."
+        "B": "\"Despite\" là giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ), khác loại với đáp án đúng \"Unless\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này.",
+        "C": "\"Because of\" là giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ), khác loại với đáp án đúng \"Unless\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này.",
+        "D": "Phương án (D) \"During\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"Unless\" trong câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [],
       "keyVocabulary": [
         {
@@ -71288,12 +71288,12 @@
       "translation": "Bất chấp những lo ngại về dung lượng máy chủ, nền tảng phân tích đã được triển khai cho tất cả các văn phòng khu vực.",
       "grammarBreakdown": "Phương án [A] (\"Despite\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "B": "Phương án (B) \"Although\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "Phương án (C) \"Because\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "D": "\"Unless\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này."
+        "B": "\"Although\" là liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\"), khác loại với đáp án đúng \"Despite\" (giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ)) — không thể thay thế trong cấu trúc câu này.",
+        "C": "\"Because\" là liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\"), khác loại với đáp án đúng \"Despite\" (giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ)) — không thể thay thế trong cấu trúc câu này.",
+        "D": "\"Unless\" là liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\"), khác loại với đáp án đúng \"Despite\" (giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ)) — không thể thay thế trong cấu trúc câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [],
       "keyVocabulary": [
         {
@@ -72630,12 +72630,12 @@
       "translation": "Giấy phép phần mềm sẽ tự động gia hạn trừ khi nhóm mua hàng hủy giấy phép trước ngày 30 tháng 6.",
       "grammarBreakdown": "Phương án [A] (\"unless\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "B": "Phương án (B) \"despite\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "Phương án (C) \"therefore\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "D": "\"whereas\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này."
+        "B": "\"despite\" là giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ), khác loại với đáp án đúng \"unless\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này.",
+        "C": "\"therefore\" là trạng từ liên kết (đứng đầu câu độc lập hoặc sau dấu chấm/chấm phẩy, không tự nối trực tiếp 2 mệnh đề bằng dấu phẩy), khác loại với đáp án đúng \"unless\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này.",
+        "D": "Phương án (D) \"whereas\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"unless\" trong câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [],
       "keyVocabulary": [
         {
@@ -74140,12 +74140,12 @@
       "translation": "Bảng điều khiển sẽ hiển thị các vé đã lưu trữ khi người dùng chọn bộ lọc lịch sử.",
       "grammarBreakdown": "Phương án [A] (\"when\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "B": "Phương án (B) \"despite\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "\"whereas\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này.",
-        "D": "Phương án (D) \"therefore\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation)."
+        "B": "\"despite\" là giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ), khác loại với đáp án đúng \"when\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này.",
+        "C": "Phương án (C) \"whereas\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"when\" trong câu này.",
+        "D": "\"therefore\" là trạng từ liên kết (đứng đầu câu độc lập hoặc sau dấu chấm/chấm phẩy, không tự nối trực tiếp 2 mệnh đề bằng dấu phẩy), khác loại với đáp án đúng \"when\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [],
       "keyVocabulary": [
         {
@@ -75746,12 +75746,12 @@
       "translation": "Bất chấp sự chậm trễ trong vận chuyển, nhà cung cấp vẫn kỳ vọng sẽ đáp ứng được thời hạn của dự án.",
       "grammarBreakdown": "Phương án [A] (\"Despite\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "B": "Phương án (B) \"Because\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "Phương án (C) \"When\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "D": "Phương án (D) \"Until\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation)."
+        "B": "\"Because\" là liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\"), khác loại với đáp án đúng \"Despite\" (giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ)) — không thể thay thế trong cấu trúc câu này.",
+        "C": "\"When\" là liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\"), khác loại với đáp án đúng \"Despite\" (giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ)) — không thể thay thế trong cấu trúc câu này.",
+        "D": "Phương án (D) \"Until\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"Despite\" trong câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [],
       "keyVocabulary": [
         {
@@ -76423,12 +76423,12 @@
       "translation": "Người quản lý giải thích khi nào chính sách hoàn trả mới sẽ có hiệu lực.",
       "grammarBreakdown": "Phương án [A] (\"when\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "B": "\"during\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này.",
-        "C": "Phương án (C) \"because\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "D": "Phương án (D) \"despite\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation)."
+        "B": "Phương án (B) \"during\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"when\" trong câu này.",
+        "C": "Phương án (C) \"because\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"when\" trong câu này.",
+        "D": "\"despite\" là giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ), khác loại với đáp án đúng \"when\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [],
       "keyVocabulary": [
         {
@@ -76979,12 +76979,12 @@
       "translation": "Yêu cầu sửa chữa sẽ không được xử lý trừ khi khách hàng cung cấp số sê-ri sản phẩm.",
       "grammarBreakdown": "Phương án [A] (\"unless\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "B": "Phương án (B) \"despite\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "\"whereas\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này.",
-        "D": "\"afterwards\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này."
+        "B": "\"despite\" là giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ), khác loại với đáp án đúng \"unless\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này.",
+        "C": "Phương án (C) \"whereas\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"unless\" trong câu này.",
+        "D": "Phương án (D) \"afterwards\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"unless\" trong câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [],
       "keyVocabulary": [
         {
@@ -80795,12 +80795,12 @@
       "translation": "Nhân viên có thể truy cập cơ sở dữ liệu nghiên cứu từ xa với điều kiện họ hoàn thành khóa đào tạo bảo mật mới.",
       "grammarBreakdown": "Phương án [A] (\"provided that\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "B": "Phương án (B) \"despite\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "Phương án (C) \"in addition to\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "D": "Phương án (D) \"otherwise\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation)."
+        "B": "\"despite\" là giới từ/cụm giới từ (theo sau phải là cụm danh từ/V-ing, không phải một mệnh đề đầy đủ), khác loại với đáp án đúng \"provided that\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này.",
+        "C": "Phương án (C) \"in addition to\" không phù hợp về nghĩa/logic liên kết ý so với đáp án đúng \"provided that\" trong câu này.",
+        "D": "\"otherwise\" là trạng từ liên kết (đứng đầu câu độc lập hoặc sau dấu chấm/chấm phẩy, không tự nối trực tiếp 2 mệnh đề bằng dấu phẩy), khác loại với đáp án đúng \"provided that\" (liên từ phụ thuộc (nối trực tiếp 2 mệnh đề đủ chủ-vị: \"..., S + V\")) — không thể thay thế trong cấu trúc câu này."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Mẹo liên từ: Xác định vế sau chỗ trống là một MỆNH ĐỀ đầy đủ (S+V) hay chỉ một CỤM DANH TỪ/V-ing, rồi chọn đúng loại từ nối (liên từ / giới từ / trạng từ liên kết) tương ứng.",
       "wordFamily": [],
       "keyVocabulary": [
         {
