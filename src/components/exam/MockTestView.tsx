@@ -5,23 +5,25 @@ import { convertToeicScore, saveMockExamAttempt, recordBatchQuestionAttempts, up
 import { PassageViewer } from '../practice/PassageViewer';
 import { LayeredExplanation } from '../practice/LayeredExplanation';
 import { QuestionNoteDrawer } from '../notes/QuestionNoteDrawer';
-import { 
-  Timer, 
-  Play, 
-  Pause, 
-  CheckCircle2, 
-  RotateCcw, 
-  ArrowLeft, 
-  ArrowRight, 
-  Flag, 
-  BookmarkCheck, 
-  PenTool, 
-  Trophy, 
-  BarChart2, 
-  BookOpen, 
-  Check, 
+import {
+  Timer,
+  Play,
+  Pause,
+  CheckCircle2,
+  RotateCcw,
+  ArrowLeft,
+  ArrowRight,
+  Flag,
+  BookmarkCheck,
+  PenTool,
+  Trophy,
+  BarChart2,
+  BookOpen,
+  Check,
   BookOpenCheck,
-  Sparkles
+  Sparkles,
+  History,
+  X
 } from 'lucide-react';
 
 interface MockTestViewProps {
@@ -33,6 +35,21 @@ interface MockTestViewProps {
 }
 
 type ExamState = 'select' | 'testing' | 'result' | 'review';
+
+const MOCK_EXAM_SESSION_KEY_PREFIX = 'toeic_mock_exam_session_';
+
+interface PersistedExamSession {
+  testId: string;
+  testTitle: string;
+  examMode: 'reading' | 'mini' | 'free';
+  questionIds: string[];
+  currentIndex: number;
+  answers: Record<string, 'A' | 'B' | 'C' | 'D'>;
+  flaggedIds: string[];
+  timeRemainingSeconds: number;
+  elapsedSecondsSoFar: number;
+  savedAt: number;
+}
 
 export const MockTestView: React.FC<MockTestViewProps> = ({
   userId,
@@ -64,11 +81,97 @@ export const MockTestView: React.FC<MockTestViewProps> = ({
   // Note Drawer state
   const [isNoteDrawerOpen, setIsNoteDrawerOpen] = useState(false);
 
+  // Resumable session recovered from localStorage (in-progress exam surviving a refresh/tab close)
+  const [resumableSession, setResumableSession] = useState<PersistedExamSession | null>(null);
+
   const timerRef = useRef<any>(null);
   const startTimeRef = useRef<number>(Date.now());
 
   // Available tests from questions
   const availableTests = useMemo(() => TESTS, []);
+
+  const sessionStorageKey = `${MOCK_EXAM_SESSION_KEY_PREFIX}${userId}`;
+
+  // On mount, check whether this user left an in-progress exam behind
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(sessionStorageKey);
+      if (raw) {
+        const parsed: PersistedExamSession = JSON.parse(raw);
+        if (parsed && Array.isArray(parsed.questionIds) && parsed.questionIds.length > 0) {
+          setResumableSession(parsed);
+        }
+      }
+    } catch {
+      localStorage.removeItem(sessionStorageKey);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userId]);
+
+  // Persist exam progress continuously while testing, so a refresh/crash doesn't lose the attempt
+  useEffect(() => {
+    if (examState !== 'testing') return;
+    const session: PersistedExamSession = {
+      testId: selectedTest.id,
+      testTitle: selectedTest.title,
+      examMode,
+      questionIds: examQuestions.map(q => q.id),
+      currentIndex,
+      answers,
+      flaggedIds: Array.from(flaggedIds),
+      timeRemainingSeconds,
+      elapsedSecondsSoFar: Math.round((Date.now() - startTimeRef.current) / 1000),
+      savedAt: Date.now()
+    };
+    try {
+      localStorage.setItem(sessionStorageKey, JSON.stringify(session));
+    } catch {
+      // ignore storage quota errors — losing autosave is better than crashing the exam
+    }
+  }, [examState, selectedTest, examMode, examQuestions, currentIndex, answers, flaggedIds, timeRemainingSeconds, sessionStorageKey]);
+
+  // Warn before an accidental refresh/tab close while a timed exam is in progress
+  useEffect(() => {
+    if (examState !== 'testing') return;
+    const handler = (e: BeforeUnloadEvent) => {
+      e.preventDefault();
+      e.returnValue = '';
+    };
+    window.addEventListener('beforeunload', handler);
+    return () => window.removeEventListener('beforeunload', handler);
+  }, [examState]);
+
+  const clearPersistedSession = () => {
+    localStorage.removeItem(sessionStorageKey);
+    setResumableSession(null);
+  };
+
+  // Resume an in-progress exam recovered from localStorage
+  const handleResumeExam = () => {
+    if (!resumableSession) return;
+    const idMap = new Map(QUESTION_BANK.map(q => [q.id, q]));
+    const restoredQuestions = resumableSession.questionIds
+      .map(id => idMap.get(id))
+      .filter((q): q is Question => Boolean(q));
+
+    if (restoredQuestions.length === 0) {
+      clearPersistedSession();
+      return;
+    }
+
+    const test = availableTests.find(t => t.id === resumableSession.testId) || selectedTest;
+    setSelectedTest(test);
+    setExamMode(resumableSession.examMode);
+    setExamQuestions(restoredQuestions);
+    setCurrentIndex(Math.min(resumableSession.currentIndex, restoredQuestions.length - 1));
+    setAnswers(resumableSession.answers);
+    setFlaggedIds(new Set(resumableSession.flaggedIds));
+    setTimeRemainingSeconds(resumableSession.timeRemainingSeconds);
+    setIsTimerPaused(false);
+    startTimeRef.current = Date.now() - resumableSession.elapsedSecondsSoFar * 1000;
+    setExamState('testing');
+    setResumableSession(null);
+  };
 
   // Filter questions for current test and selected mode
   const setupQuestionsForExam = (test: ToeicTest, mode: 'reading' | 'mini' | 'free') => {
@@ -101,6 +204,7 @@ export const MockTestView: React.FC<MockTestViewProps> = ({
 
   // Start exam handler
   const handleStartExam = () => {
+    clearPersistedSession();
     const { filtered, durationMins } = setupQuestionsForExam(selectedTest, examMode);
     setExamQuestions(filtered);
     setCurrentIndex(0);
@@ -248,6 +352,7 @@ export const MockTestView: React.FC<MockTestViewProps> = ({
       await recordBatchQuestionAttempts(userId, batchRecords);
     }
     await saveMockExamAttempt(attemptResult);
+    clearPersistedSession();
     setLastExamResult(attemptResult);
     setExamState('result');
   };
@@ -275,6 +380,40 @@ export const MockTestView: React.FC<MockTestViewProps> = ({
   if (examState === 'select') {
     return (
       <div className="max-w-5xl mx-auto px-4 py-8 space-y-6 animate-in fade-in duration-300">
+        {/* Resumable session banner */}
+        {resumableSession && (
+          <div className="bg-amber-50 border border-amber-300 rounded-3xl p-5 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="flex items-start gap-3">
+              <div className="w-10 h-10 shrink-0 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center border border-amber-200">
+                <History className="w-5 h-5" />
+              </div>
+              <div>
+                <h4 className="font-bold text-sm text-amber-900">Bạn có một bài thi đang làm dở</h4>
+                <p className="text-xs text-amber-800 mt-0.5">
+                  {resumableSession.testTitle} • Câu {Math.min(resumableSession.currentIndex + 1, resumableSession.questionIds.length)}/{resumableSession.questionIds.length} • Còn lại {formatTime(resumableSession.timeRemainingSeconds)}
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2 w-full sm:w-auto shrink-0">
+              <button
+                type="button"
+                onClick={handleResumeExam}
+                className="flex-1 sm:flex-none px-4 py-2 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold shadow-xs transition-all"
+              >
+                Tiếp tục làm bài
+              </button>
+              <button
+                type="button"
+                onClick={clearPersistedSession}
+                title="Bỏ bài đang dở, bắt đầu mới"
+                className="p-2 rounded-xl border border-amber-300 text-amber-700 hover:bg-amber-100 transition-all"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* Banner Header */}
         <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="space-y-2">

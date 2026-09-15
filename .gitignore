@@ -30,3 +30,6 @@ dist-ssr
 !.dev.vars.example
 .env*
 !.env.example
+
+# local Claude Code state
+.claude

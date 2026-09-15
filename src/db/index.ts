@@ -4,15 +4,15 @@ import type { Attempt, SrsItem, VocabularyItem, UserProfile, CognitiveStatus, Co
 export const DEFAULT_PROFILES: UserProfile[] = [
   {
     id: 'user_1',
-    name: 'Học viên A (Thành)',
+    name: 'Học viên 1',
     avatarBg: 'from-indigo-500 to-purple-600',
-    role: 'Mục tiêu Reading 450+'
+    role: 'Đang luyện thi TOEIC'
   },
   {
     id: 'user_2',
-    name: 'Học viên B (Quỳnh Như)',
+    name: 'Học viên 2',
     avatarBg: 'from-emerald-500 to-teal-600',
-    role: 'Mục tiêu Reading 350+'
+    role: 'Đang luyện thi TOEIC'
   }
 ];
 
@@ -409,107 +409,90 @@ export async function deleteMockExamAttempt(id: string): Promise<void> {
   await db.mockExamAttempts.delete(id);
 }
 
-// Seed sample data for user_1 so user can immediately see analytics & mistake bank
+// Ensure the default profiles exist without ever overwriting a name the user has customized.
 export async function seedSampleDataIfEmpty() {
   try {
-    // Ensure default profiles exist and updated
     for (const p of DEFAULT_PROFILES) {
-      await db.userProfiles.put(p);
-    }
-
-    const attemptCount = await db.attempts.count();
-    if (attemptCount > 0) return;
-
-
-  const now = Date.now();
-  // Sample attempts strictly assigned to user_1 (User 2 starts clean with 0 attempts!)
-  const sampleAttempts: Attempt[] = [
-    {
-      userId: 'user_1',
-      questionId: 'p5_0001',
-      selectedOption: 'A',
-      isCorrect: false,
-      confidence: 'sure',
-      cognitiveStatus: 'misconception',
-      timeSpentSeconds: 14,
-      timestamp: now - 3600 * 1000 * 4,
-      errorReason: 'trap',
-      userNotes: 'Cứ nghĩ responsible đi với to V, quên mất sau đó là inspecting (V-ing)!'
-    },
-    {
-      userId: 'user_1',
-      questionId: 'p5_0003',
-      selectedOption: 'A',
-      isCorrect: false,
-      confidence: 'likely',
-      cognitiveStatus: 'misconception',
-      timeSpentSeconds: 22,
-      timestamp: now - 3600 * 1000 * 8,
-      errorReason: 'careless',
-      userNotes: 'Thấy nghĩa là mặc dù nên chọn vội Although, không nhìn ra increase là Noun phrase.'
-    },
-    {
-      userId: 'user_1',
-      questionId: 'p5_0004',
-      selectedOption: 'C',
-      isCorrect: true,
-      confidence: 'guess',
-      cognitiveStatus: 'lucky_guess',
-      timeSpentSeconds: 30,
-      timestamp: now - 3600 * 1000 * 2,
-      userNotes: 'Đoán đuôi -ly đại, may mắn đúng nhưng chưa hiểu rõ công thức Adv + Adj + Noun.'
-    }
-  ];
-
-  await db.attempts.bulkAdd(sampleAttempts);
-
-  // Add initial SRS items for user_1
-  for (const att of sampleAttempts) {
-    const srsItem = calculateNextSrsState(undefined, 'user_1', att.questionId, att.isCorrect, att.confidence);
-    await db.srsItems.put(srsItem);
-  }
-
-  // Add a sample vocabulary item for user_1
-  await addVocabularyWord(
-    'user_1',
-    'responsible for',
-    'chịu trách nhiệm cho (+ Noun / V-ing)',
-    'The maintenance staff are responsible for inspecting machinery.',
-    'p5_0001'
-  );
-  await addVocabularyWord(
-    'user_1',
-    'comply with',
-    'tuân thủ theo (quy định, tiêu chuẩn)',
-    'All facilities must comply with strict environmental standards.',
-    'p5_0005'
-  );
-
-  // Add initial sample notes for user_1
-  const noteCount = await db.notes.count();
-  if (noteCount === 0) {
-    await saveUserNote(
-      'user_1',
-      '• Cấu trúc: be responsible for + V-ing / Noun\n• Ví dụ: responsible for inspecting the machinery\n• Chú ý: Tránh bẫy nhầm chọn To-V sau responsible!',
-      {
-        title: 'Phân biệt cấu trúc responsible for',
-        questionId: 'p5_0001',
-        part: 5,
-        tags: ['Part 5', 'Giới từ', 'Ngữ pháp']
+      const existing = await db.userProfiles.get(p.id);
+      if (!existing) {
+        await db.userProfiles.put(p);
       }
-    );
-    await saveUserNote(
-      'user_1',
-      '• Chiến thuật Part 7: Đọc câu hỏi trước để định vị từ khóa (keyword scanning).\n• Cảnh giác các bẫy paraphrase và đáp án chứa từ giống 100% trong bài nhưng sai ngữ cảnh.',
-      {
-        title: 'Chiến thuật giải bẫy Paraphrase Part 7',
-        part: 7,
-        tags: ['Part 7', 'Chiến thuật', 'Reading']
-      }
-    );
-  }
+    }
   } catch (err) {
-    console.error('Lỗi khởi tạo dữ liệu mẫu:', err);
+    console.error('Lỗi khởi tạo hồ sơ mặc định:', err);
   }
+}
+
+// Rename a user profile (kept generic on purpose — this app is public, so no real names ship in source)
+export async function renameUserProfile(profileId: string, name: string): Promise<void> {
+  const trimmed = name.trim();
+  if (!trimmed) return;
+  await db.userProfiles.update(profileId, { name: trimmed });
+}
+
+// ==========================================
+// BACKUP / RESTORE (export & import all local data as JSON)
+// ==========================================
+export interface DatabaseBackup {
+  version: 1;
+  exportedAt: number;
+  attempts: Attempt[];
+  srsItems: SrsItem[];
+  vocabulary: VocabularyItem[];
+  userProfiles: UserProfile[];
+  notes: UserNote[];
+  mockExamAttempts: MockExamAttempt[];
+}
+
+export async function exportDatabase(): Promise<DatabaseBackup> {
+  const [attempts, srsItems, vocabulary, userProfiles, notes, mockExamAttempts] = await Promise.all([
+    db.attempts.toArray(),
+    db.srsItems.toArray(),
+    db.vocabulary.toArray(),
+    db.userProfiles.toArray(),
+    db.notes.toArray(),
+    db.mockExamAttempts.toArray()
+  ]);
+
+  return {
+    version: 1,
+    exportedAt: Date.now(),
+    attempts,
+    srsItems,
+    vocabulary,
+    userProfiles,
+    notes,
+    mockExamAttempts
+  };
+}
+
+export async function importDatabase(backup: DatabaseBackup): Promise<void> {
+  if (!backup || typeof backup !== 'object' || !Array.isArray(backup.attempts) || !Array.isArray(backup.srsItems)) {
+    throw new Error('File sao lưu không hợp lệ.');
+  }
+
+  await db.transaction(
+    'rw',
+    [db.attempts, db.srsItems, db.vocabulary, db.userProfiles, db.notes, db.mockExamAttempts],
+    async () => {
+      await Promise.all([
+        db.attempts.clear(),
+        db.srsItems.clear(),
+        db.vocabulary.clear(),
+        db.userProfiles.clear(),
+        db.notes.clear(),
+        db.mockExamAttempts.clear()
+      ]);
+
+      await Promise.all([
+        backup.attempts.length > 0 ? db.attempts.bulkAdd(backup.attempts) : Promise.resolve(),
+        backup.srsItems.length > 0 ? db.srsItems.bulkPut(backup.srsItems) : Promise.resolve(),
+        backup.vocabulary?.length > 0 ? db.vocabulary.bulkPut(backup.vocabulary) : Promise.resolve(),
+        db.userProfiles.bulkPut(backup.userProfiles?.length > 0 ? backup.userProfiles : DEFAULT_PROFILES),
+        backup.notes?.length > 0 ? db.notes.bulkPut(backup.notes) : Promise.resolve(),
+        backup.mockExamAttempts?.length > 0 ? db.mockExamAttempts.bulkPut(backup.mockExamAttempts) : Promise.resolve()
+      ]);
+    }
+  );
 }
 

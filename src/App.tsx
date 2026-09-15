@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { db, seedSampleDataIfEmpty, DEFAULT_PROFILES } from './db';
+import { db, seedSampleDataIfEmpty, DEFAULT_PROFILES, renameUserProfile, exportDatabase, importDatabase, type DatabaseBackup } from './db';
 import type { ViewMode, UserProfile } from './types';
 
 import { SAMPLE_QUESTIONS } from './data/questions';
@@ -127,7 +127,7 @@ export function App() {
 
   // Reset database handler
   const handleResetData = async () => {
-    if (window.confirm('Bạn có chắc muốn làm mới dữ liệu? Hồ sơ học viên sẽ được đặt về trạng thái chuẩn ban đầu.')) {
+    if (window.confirm('Bạn có chắc muốn xóa toàn bộ dữ liệu học tập (lượt làm bài, SRS, từ vựng, ghi chú, bài thi thử)? Hành động này không thể hoàn tác — hãy Xuất dữ liệu trước nếu muốn giữ lại.')) {
       await db.attempts.clear();
       await db.srsItems.clear();
       await db.vocabulary.clear();
@@ -136,6 +136,42 @@ export function App() {
       await seedSampleDataIfEmpty();
       handleClearDrill();
       handleNavigateView('dashboard');
+    }
+  };
+
+  // Rename active profile (profiles ship with generic names since this app is public)
+  const handleRenameProfile = async (profileId: string, name: string) => {
+    await renameUserProfile(profileId, name);
+  };
+
+  // Export all local data to a downloadable JSON backup file
+  const handleExportData = async () => {
+    const backup = await exportDatabase();
+    const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `toeic-backup-${new Date().toISOString().slice(0, 10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  };
+
+  // Import a previously exported JSON backup, replacing all current local data
+  const handleImportData = async (file: File) => {
+    try {
+      const text = await file.text();
+      const backup = JSON.parse(text) as DatabaseBackup;
+      if (!window.confirm('Nhập file sao lưu sẽ THAY THẾ toàn bộ dữ liệu hiện tại trên máy này. Tiếp tục?')) {
+        return;
+      }
+      await importDatabase(backup);
+      window.alert('Nhập dữ liệu thành công! Trang sẽ tải lại.');
+      window.location.reload();
+    } catch (err) {
+      console.error('Lỗi nhập dữ liệu:', err);
+      window.alert('File sao lưu không hợp lệ hoặc bị lỗi, vui lòng kiểm tra lại.');
     }
   };
 
@@ -154,7 +190,10 @@ export function App() {
         activeProfile={activeProfile}
         profiles={profiles}
         onSelectProfile={handleSelectProfile}
+        onRenameProfile={handleRenameProfile}
         onResetData={handleResetData}
+        onExportData={handleExportData}
+        onImportData={handleImportData}
       />
 
       {/* Main Content Area */}
@@ -234,7 +273,7 @@ export function App() {
         <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <span>🎯 TOEIC Adaptive Studio — Local-First Personal Mastery Engine</span>
           <span className="text-[11px] text-slate-500">
-            Hồ sơ hiện tại: <strong className="text-slate-800">{activeProfile.name}</strong> • 100% Offline & Local-First
+            Hồ sơ hiện tại: <strong className="text-slate-800">{activeProfile.name}</strong> • Dữ liệu lưu cục bộ trong trình duyệt này — nhớ xuất dữ liệu để sao lưu
           </span>
         </div>
       </footer>
