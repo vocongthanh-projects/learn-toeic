@@ -30,6 +30,13 @@ export interface ParseResult {
   passages: Passage[];
 }
 
+// Some sources mark Part 6 blanks as numbered template tokens (e.g. "{{131}}") instead of
+// a plain blank — replace them so the passage never shows a raw, unrendered placeholder to the user.
+function resolvePassageBlanks(text?: string): string | undefined {
+  if (!text) return text;
+  return text.replace(/\{\{\s*\d+\s*\}\}/g, '_____');
+}
+
 export function parseAllSources(rootDir: string): ParseResult {
   const sourcesDir = path.join(rootDir, 'scripts/sources');
   const allQuestions: ParsedItem[] = [];
@@ -85,7 +92,7 @@ function parseSource1(
           part,
           type: part === 3 ? 'conversation' : part === 4 ? 'talk' : 'single_passage',
           transcript: item.transcript || item.audioText,
-          content: item.passage,
+          content: resolvePassageBlanks(item.passage),
           questionIds: [],
         });
       }
@@ -148,7 +155,7 @@ function parseSource2(
       } else if (partNum === 6 || partNum === 7) {
         for (const block of p.blocks || []) {
           const passageId = `${testPrefix}_${block.id}`;
-          const passageTexts = (block.passages || []).map((pass: any) => pass.content || '').join('\n\n');
+          const passageTexts = resolvePassageBlanks((block.passages || []).map((pass: any) => pass.content || '').join('\n\n'));
           const passageLabel = (block.passages || [])[0]?.label || '';
           const passageType = (block.passages || [])[0]?.type || (partNum === 6 ? 'incomplete_text' : 'single_passage');
 
@@ -222,7 +229,7 @@ function parseSource3(
           part,
           type: part === 3 ? 'conversation' : part === 4 ? 'talk' : part === 6 ? 'incomplete_text' : 'single_passage',
           title: item.category || '',
-          content: item.passage || undefined,
+          content: resolvePassageBlanks(item.passage) || undefined,
           transcript: item.audioText || undefined,
           questionIds: [],
         });

@@ -58,9 +58,13 @@ interface FormRequirement {
   reason: string;
 }
 
+// Question sources mark the blank with runs of 3+ underscores of varying length ("_____" or "______") — match either.
+const BLANK_MARKER_RE = /_{3,}/;
+
 function detectTrigger(qText: string): FormRequirement | null {
-  const idx = qText.indexOf('______');
-  if (idx === -1) return null;
+  const match = BLANK_MARKER_RE.exec(qText);
+  if (!match) return null;
+  const idx = match.index;
   const before = qText.slice(0, idx).trim();
   const beforeLower = before.toLowerCase();
 
@@ -270,7 +274,7 @@ export function getCleanSentenceTranslation(q: Question): string {
     }
 
     // Default informative sentence breakdown
-    return `Câu hoàn chỉnh khi điền phương án đúng [${q.correctAnswer}] ("${correctWord}"): "${rawQ.replace('______', `[${correctWord}]`)}".`;
+    return `Câu hoàn chỉnh khi điền phương án đúng [${q.correctAnswer}] ("${correctWord}"): "${rawQ.replace(BLANK_MARKER_RE, `[${correctWord}]`)}".`;
   }
 
   if (q.part === 6) {
@@ -295,7 +299,7 @@ export function getDeepGrammarBreakdown(q: Question): string {
 
   if (q.part === 5) {
     // 1. Detect "the ______ of" pattern
-    if (/the\s+______\s+of/i.test(qText)) {
+    if (/the\s+_{3,}\s+of/i.test(qText)) {
       return `📌 Cấu trúc tổng quát:
 - Chủ ngữ (S): "${qText.split(/has|have|is|are|was|were|will/i)[0]?.trim() || 'The board'}"
 - Động từ chính (V): "has approved" (Hiện tại hoàn thành)
@@ -347,7 +351,7 @@ export function getDeepGrammarBreakdown(q: Question): string {
         const mark = o.key === q.correctAnswer ? '✅ Đáp án đúng' : '❌ Loại';
         return `- [${o.key}] "${o.text}" → ${info.label} ${mark}`;
       }).join('\n');
-      return `📌 Câu: "${qText.replace('______', '[...]')}"
+      return `📌 Câu: "${qText.replace(BLANK_MARKER_RE, '[...]')}"
 
 🎯 Quy tắc ngữ pháp:
 ${formReq.reason}

@@ -39723,12 +39723,12 @@
       "translation": "Công ty kỳ vọng doanh số bán hàng trực tuyến sẽ tăng đáng kể trong quý tới.",
       "grammarBreakdown": "Phương án [A] (\"increase\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "B": "\"increased\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này.",
-        "C": "\"increasing\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này.",
-        "D": "\"increases\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này."
+        "B": "\"increased\" là động từ chia ở thì quá khứ / dạng phân từ quá khứ (V-ed / V3). \"to\" đứng ngay trước chỗ trống là dấu hiệu của động từ nguyên mẫu (to-infinitive), nên chỗ trống chỉ cần điền động từ nguyên mẫu, KHÔNG lặp lại \"to\" một lần nữa. Do đó phương án này sai về dạng động từ (verb form).",
+        "C": "\"increasing\" là danh động từ / phân từ hiện tại (V-ing). \"to\" đứng ngay trước chỗ trống là dấu hiệu của động từ nguyên mẫu (to-infinitive), nên chỗ trống chỉ cần điền động từ nguyên mẫu, KHÔNG lặp lại \"to\" một lần nữa. Do đó phương án này sai về dạng động từ (verb form).",
+        "D": "\"increases\" là động từ chia ngôi thứ ba số ít (V-s/es). \"to\" đứng ngay trước chỗ trống là dấu hiệu của động từ nguyên mẫu (to-infinitive), nên chỗ trống chỉ cần điền động từ nguyên mẫu, KHÔNG lặp lại \"to\" một lần nữa. Do đó phương án này sai về dạng động từ (verb form)."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Nhận diện \"to\" ngay trước chỗ trống ➔ chỗ trống phải là động từ nguyên mẫu không \"to\". Loại ngay các phương án chia thì/dạng khác.",
       "wordFamily": [
         {
           "word": "increase",
@@ -41122,12 +41122,12 @@
       "translation": "Tất cả các ứng dụng phải được gửi bằng điện tử thông qua cổng thông tin công ty.",
       "grammarBreakdown": "Phương án [B] (\"be submitted\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "A": "Phương án (A) \"submit\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "\"submitted\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này.",
-        "D": "\"be submitting\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này."
+        "A": "\"submit\" là động từ nguyên mẫu không \"to\" (bare infinitive / base form). Sau động từ khuyết thiếu (modal verb) \"must\" luôn là động từ nguyên mẫu không \"to\" (bare infinitive). Do đó phương án này sai về dạng động từ (verb form).",
+        "C": "\"submitted\" là động từ chia ở thì quá khứ / dạng phân từ quá khứ (V-ed / V3). Sau động từ khuyết thiếu (modal verb) \"must\" luôn là động từ nguyên mẫu không \"to\" (bare infinitive). Do đó phương án này sai về dạng động từ (verb form).",
+        "D": "\"be submitting\" là động từ nguyên mẫu không \"to\" (bare infinitive / base form). Sau động từ khuyết thiếu (modal verb) \"must\" luôn là động từ nguyên mẫu không \"to\" (bare infinitive). Do đó phương án này sai về dạng động từ (verb form)."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Nhận diện \"must\" ngay trước chỗ trống ➔ chỗ trống phải là động từ nguyên mẫu không \"to\". Loại ngay các phương án chia thì/dạng khác.",
       "wordFamily": [
         {
           "word": "submit",
@@ -52753,12 +52753,12 @@
       "translation": "Ủy ban cam kết giảm tiêu thụ năng lượng 10%.",
       "grammarBreakdown": "Phương án [C] (\"reducing\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "A": "Phương án (A) \"reduce\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "B": "\"reduced\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này.",
-        "D": "\"reduction\" là DANH TỪ (Noun), không phù hợp vị trí đòi hỏi động từ hoặc tính từ trong câu."
+        "A": "\"reduce\" là động từ nguyên mẫu không \"to\" (bare infinitive / base form). Cụm từ \"committed to\" hoạt động như một GIỚI TỪ, nên động từ theo ngay sau nó phải chia ở dạng danh động từ (V-ing), không phải động từ nguyên mẫu. Do đó phương án này sai về dạng động từ (verb form).",
+        "B": "\"reduced\" là động từ chia ở thì quá khứ / dạng phân từ quá khứ (V-ed / V3). Cụm từ \"committed to\" hoạt động như một GIỚI TỪ, nên động từ theo ngay sau nó phải chia ở dạng danh động từ (V-ing), không phải động từ nguyên mẫu. Do đó phương án này sai về dạng động từ (verb form).",
+        "D": "\"reduction\" là động từ nguyên mẫu không \"to\" (bare infinitive / base form). Cụm từ \"committed to\" hoạt động như một GIỚI TỪ, nên động từ theo ngay sau nó phải chia ở dạng danh động từ (V-ing), không phải động từ nguyên mẫu. Do đó phương án này sai về dạng động từ (verb form)."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Nhận diện \"committed to\" ngay trước chỗ trống ➔ chỗ trống phải là V-ing. Loại ngay các phương án chia thì/dạng khác.",
       "wordFamily": [
         {
           "word": "reduce",
@@ -52828,12 +52828,12 @@
       "translation": "Cô Flores đã quen làm việc với các khách hàng quốc tế.",
       "grammarBreakdown": "Phương án [C] (\"working\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "A": "Phương án (A) \"work\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "B": "\"worked\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này.",
-        "D": "\"be worked\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này."
+        "A": "\"work\" là động từ nguyên mẫu không \"to\" (bare infinitive / base form). Cụm từ \"accustomed to\" hoạt động như một GIỚI TỪ, nên động từ theo ngay sau nó phải chia ở dạng danh động từ (V-ing), không phải động từ nguyên mẫu. Do đó phương án này sai về dạng động từ (verb form).",
+        "B": "\"worked\" là động từ chia ở thì quá khứ / dạng phân từ quá khứ (V-ed / V3). Cụm từ \"accustomed to\" hoạt động như một GIỚI TỪ, nên động từ theo ngay sau nó phải chia ở dạng danh động từ (V-ing), không phải động từ nguyên mẫu. Do đó phương án này sai về dạng động từ (verb form).",
+        "D": "\"be worked\" là động từ nguyên mẫu không \"to\" (bare infinitive / base form). Cụm từ \"accustomed to\" hoạt động như một GIỚI TỪ, nên động từ theo ngay sau nó phải chia ở dạng danh động từ (V-ing), không phải động từ nguyên mẫu. Do đó phương án này sai về dạng động từ (verb form)."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Nhận diện \"accustomed to\" ngay trước chỗ trống ➔ chỗ trống phải là V-ing. Loại ngay các phương án chia thì/dạng khác.",
       "wordFamily": [
         {
           "word": "work",
@@ -68565,12 +68565,12 @@
       "translation": "Tất cả các yêu cầu bảo hành phải được kèm theo bản sao biên nhận gốc.",
       "grammarBreakdown": "Phương án [A] (\"be accompanied\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "B": "Phương án (B) \"accompany\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "\"accompanying\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này.",
-        "D": "Phương án (D) \"to accompany\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation)."
+        "B": "\"accompany\" là động từ nguyên mẫu không \"to\" (bare infinitive / base form). Sau động từ khuyết thiếu (modal verb) \"must\" luôn là động từ nguyên mẫu không \"to\" (bare infinitive). Do đó phương án này sai về dạng động từ (verb form).",
+        "C": "\"accompanying\" là danh động từ / phân từ hiện tại (V-ing). Sau động từ khuyết thiếu (modal verb) \"must\" luôn là động từ nguyên mẫu không \"to\" (bare infinitive). Do đó phương án này sai về dạng động từ (verb form).",
+        "D": "\"to accompany\" là động từ nguyên mẫu có \"to\" (to-infinitive). Sau động từ khuyết thiếu (modal verb) \"must\" luôn là động từ nguyên mẫu không \"to\" (bare infinitive). Do đó phương án này sai về dạng động từ (verb form)."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Nhận diện \"must\" ngay trước chỗ trống ➔ chỗ trống phải là động từ nguyên mẫu không \"to\". Loại ngay các phương án chia thì/dạng khác.",
       "wordFamily": [
         {
           "word": "accompany",
@@ -70300,12 +70300,12 @@
       "translation": "Đại diện dịch vụ sẽ thông báo cho khách hàng về bất kỳ thay đổi nào đối với thời hạn giao hàng của họ.",
       "grammarBreakdown": "Phương án [A] (\"notify\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "B": "Phương án (B) \"notice\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation).",
-        "C": "\"notified\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này.",
-        "D": "\"notification\" là DANH TỪ (Noun), không phù hợp vị trí đòi hỏi động từ hoặc tính từ trong câu."
+        "B": "\"notice\" là động từ nguyên mẫu không \"to\" (bare infinitive / base form). Sau động từ khuyết thiếu (modal verb) \"will\" luôn là động từ nguyên mẫu không \"to\" (bare infinitive). Do đó phương án này sai về dạng động từ (verb form).",
+        "C": "\"notified\" là động từ chia ở thì quá khứ / dạng phân từ quá khứ (V-ed / V3). Sau động từ khuyết thiếu (modal verb) \"will\" luôn là động từ nguyên mẫu không \"to\" (bare infinitive). Do đó phương án này sai về dạng động từ (verb form).",
+        "D": "\"notification\" là động từ nguyên mẫu không \"to\" (bare infinitive / base form). Sau động từ khuyết thiếu (modal verb) \"will\" luôn là động từ nguyên mẫu không \"to\" (bare infinitive). Do đó phương án này sai về dạng động từ (verb form)."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Nhận diện \"will\" ngay trước chỗ trống ➔ chỗ trống phải là động từ nguyên mẫu không \"to\". Loại ngay các phương án chia thì/dạng khác.",
       "wordFamily": [
         {
           "word": "notify",
@@ -70828,12 +70828,12 @@
       "translation": "Người quản lý hoạt động yêu cầu nhân viên báo cáo trực tiếp mọi sự chậm trễ cho bộ phận hậu cần.",
       "grammarBreakdown": "Phương án [A] (\"report\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "B": "\"reporting\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này.",
-        "C": "\"reported\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này.",
-        "D": "Phương án (D) \"reporter\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation)."
+        "B": "\"reporting\" là danh động từ / phân từ hiện tại (V-ing). \"to\" đứng ngay trước chỗ trống là dấu hiệu của động từ nguyên mẫu (to-infinitive), nên chỗ trống chỉ cần điền động từ nguyên mẫu, KHÔNG lặp lại \"to\" một lần nữa. Do đó phương án này sai về dạng động từ (verb form).",
+        "C": "\"reported\" là động từ chia ở thì quá khứ / dạng phân từ quá khứ (V-ed / V3). \"to\" đứng ngay trước chỗ trống là dấu hiệu của động từ nguyên mẫu (to-infinitive), nên chỗ trống chỉ cần điền động từ nguyên mẫu, KHÔNG lặp lại \"to\" một lần nữa. Do đó phương án này sai về dạng động từ (verb form).",
+        "D": "\"reporter\" là động từ nguyên mẫu không \"to\" (bare infinitive / base form). \"to\" đứng ngay trước chỗ trống là dấu hiệu của động từ nguyên mẫu (to-infinitive), nên chỗ trống chỉ cần điền động từ nguyên mẫu, KHÔNG lặp lại \"to\" một lần nữa. Do đó phương án này sai về dạng động từ (verb form)."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Nhận diện \"to\" ngay trước chỗ trống ➔ chỗ trống phải là động từ nguyên mẫu không \"to\". Loại ngay các phương án chia thì/dạng khác.",
       "wordFamily": [],
       "keyVocabulary": [
         {
@@ -71060,12 +71060,12 @@
       "translation": "Kiến trúc sư đám mây sẽ xem xét kế hoạch di chuyển với các nhà quản lý bộ phận trước khi triển khai.",
       "grammarBreakdown": "Phương án [A] (\"review\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "B": "\"reviewing\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này.",
-        "C": "\"reviewed\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này.",
-        "D": "Phương án (D) \"reviewer\" sai về từ loại hoặc không đúng cấu trúc kết hợp từ (collocation)."
+        "B": "\"reviewing\" là danh động từ / phân từ hiện tại (V-ing). Sau động từ khuyết thiếu (modal verb) \"will\" luôn là động từ nguyên mẫu không \"to\" (bare infinitive). Do đó phương án này sai về dạng động từ (verb form).",
+        "C": "\"reviewed\" là động từ chia ở thì quá khứ / dạng phân từ quá khứ (V-ed / V3). Sau động từ khuyết thiếu (modal verb) \"will\" luôn là động từ nguyên mẫu không \"to\" (bare infinitive). Do đó phương án này sai về dạng động từ (verb form).",
+        "D": "\"reviewer\" là động từ nguyên mẫu không \"to\" (bare infinitive / base form). Sau động từ khuyết thiếu (modal verb) \"will\" luôn là động từ nguyên mẫu không \"to\" (bare infinitive). Do đó phương án này sai về dạng động từ (verb form)."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Nhận diện \"will\" ngay trước chỗ trống ➔ chỗ trống phải là động từ nguyên mẫu không \"to\". Loại ngay các phương án chia thì/dạng khác.",
       "wordFamily": [
         {
           "word": "review",
@@ -73218,12 +73218,12 @@
       "translation": "Nhóm cơ sở vật chất sẽ hiệu chỉnh các cảm biến chất lượng không khí sau khi quá trình cải tạo hoàn tất.",
       "grammarBreakdown": "Phương án [A] (\"calibrate\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "B": "\"calibration\" là DANH TỪ (Noun), không phù hợp vị trí đòi hỏi động từ hoặc tính từ trong câu.",
-        "C": "\"calibrated\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này.",
-        "D": "\"calibrating\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này."
+        "B": "\"calibration\" là động từ nguyên mẫu không \"to\" (bare infinitive / base form). Sau động từ khuyết thiếu (modal verb) \"will\" luôn là động từ nguyên mẫu không \"to\" (bare infinitive). Do đó phương án này sai về dạng động từ (verb form).",
+        "C": "\"calibrated\" là động từ chia ở thì quá khứ / dạng phân từ quá khứ (V-ed / V3). Sau động từ khuyết thiếu (modal verb) \"will\" luôn là động từ nguyên mẫu không \"to\" (bare infinitive). Do đó phương án này sai về dạng động từ (verb form).",
+        "D": "\"calibrating\" là danh động từ / phân từ hiện tại (V-ing). Sau động từ khuyết thiếu (modal verb) \"will\" luôn là động từ nguyên mẫu không \"to\" (bare infinitive). Do đó phương án này sai về dạng động từ (verb form)."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Nhận diện \"will\" ngay trước chỗ trống ➔ chỗ trống phải là động từ nguyên mẫu không \"to\". Loại ngay các phương án chia thì/dạng khác.",
       "wordFamily": [
         {
           "word": "calibrate",
@@ -81130,12 +81130,12 @@
       "translation": "Danh sách kiểm tra sửa đổi không chỉ nhằm xác định các giấy phép còn thiếu mà còn để xác minh xem mỗi giấy phép có còn hiệu lực hay không.",
       "grammarBreakdown": "Phương án [C] (\"verify\") phù hợp nhất về ngữ nghĩa thương mại và cấu trúc kết hợp từ (collocation) trong ngữ cảnh của câu.",
       "distractors": {
-        "A": "\"verification\" là DANH TỪ (Noun), không phù hợp vị trí đòi hỏi động từ hoặc tính từ trong câu.",
-        "B": "\"verified\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này.",
-        "D": "\"verifying\" là dạng ĐỘNG TỪ chia thì/phân từ, sai về cấu trúc ngữ pháp đối với vị trí trống này."
+        "A": "\"verification\" là động từ nguyên mẫu không \"to\" (bare infinitive / base form). \"to\" đứng ngay trước chỗ trống là dấu hiệu của động từ nguyên mẫu (to-infinitive), nên chỗ trống chỉ cần điền động từ nguyên mẫu, KHÔNG lặp lại \"to\" một lần nữa. Do đó phương án này sai về dạng động từ (verb form).",
+        "B": "\"verified\" là động từ chia ở thì quá khứ / dạng phân từ quá khứ (V-ed / V3). \"to\" đứng ngay trước chỗ trống là dấu hiệu của động từ nguyên mẫu (to-infinitive), nên chỗ trống chỉ cần điền động từ nguyên mẫu, KHÔNG lặp lại \"to\" một lần nữa. Do đó phương án này sai về dạng động từ (verb form).",
+        "D": "\"verifying\" là danh động từ / phân từ hiện tại (V-ing). \"to\" đứng ngay trước chỗ trống là dấu hiệu của động từ nguyên mẫu (to-infinitive), nên chỗ trống chỉ cần điền động từ nguyên mẫu, KHÔNG lặp lại \"to\" một lần nữa. Do đó phương án này sai về dạng động từ (verb form)."
       },
       "whyYouGotItWrong": "Chọn theo cảm tính/quán tính thói quen mà chưa phân tích kỹ từ loại đứng trước và sau chỗ trống.",
-      "quickTrick": "⚡ Mẹo 3 giây: Xác định từ loại đứng trước và đứng sau chỗ trống để loại ngay 2 đáp án sai trước khi dịch nghĩa.",
+      "quickTrick": "⚡ Nhận diện \"to\" ngay trước chỗ trống ➔ chỗ trống phải là động từ nguyên mẫu không \"to\". Loại ngay các phương án chia thì/dạng khác.",
       "wordFamily": [
         {
           "word": "verify",
