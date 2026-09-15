@@ -1,0 +1,212 @@
+[
+  {
+    "id": "ETS_P2_01",
+    "part": 2,
+    "section": "listening",
+    "prompt": "Where is the company cafeteria located?",
+    "audioText": "Where is the company cafeteria located? (A) On the lower ground floor. (B) At twelve thirty. (C) Yes, I had soup.",
+    "transcript": "Where is the company cafeteria located? (A) On the lower ground floor. (B) At twelve thirty. (C) Yes, I had soup.",
+    "choices": [
+      "On the lower ground floor.",
+      "At twelve thirty.",
+      "Yes, I had soup."
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "question-response",
+    "explanation": "Câu hỏi 'Where' hỏi về vị trí nơi chốn, đáp án A 'On the lower ground floor' chỉ địa điểm.",
+    "translation": "Căng-tin công ty nằm ở đâu?"
+  },
+  {
+    "id": "ETS_P2_02",
+    "part": 2,
+    "section": "listening",
+    "prompt": "When will the sales seminar begin?",
+    "audioText": "When will the sales seminar begin? (A) In room 402. (B) Right after the keynote speech. (C) About thirty people.",
+    "transcript": "When will the sales seminar begin? (A) In room 402. (B) Right after the keynote speech. (C) About thirty people.",
+    "choices": [
+      "In room 402.",
+      "Right after the keynote speech.",
+      "About thirty people."
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "question-response",
+    "explanation": "Câu hỏi 'When' hỏi về thời gian, đáp án B 'Right after the keynote speech' chỉ mốc thời điểm bắt đầu.",
+    "translation": "Hội thảo bán hàng khi nào bắt đầu?"
+  },
+  {
+    "id": "ETS_P2_03",
+    "part": 2,
+    "section": "listening",
+    "prompt": "Who approved this travel reimbursement request?",
+    "audioText": "Who approved this travel reimbursement request? (A) Mr. Tanaka signed it this morning. (B) Flights to Chicago were affordable. (C) In the accounting folder.",
+    "transcript": "Who approved this travel reimbursement request? (A) Mr. Tanaka signed it this morning. (B) Flights to Chicago were affordable. (C) In the accounting folder.",
+    "choices": [
+      "Mr. Tanaka signed it this morning.",
+      "Flights to Chicago were affordable.",
+      "In the accounting folder."
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "question-response",
+    "explanation": "Câu hỏi 'Who' hỏi về người phê duyệt, đáp án A nhắc đến người thực hiện là Mr. Tanaka.",
+    "translation": "Ai đã duyệt yêu cầu hoàn tiền công tác này?"
+  },
+  {
+    "id": "ETS_P2_04",
+    "part": 2,
+    "section": "listening",
+    "prompt": "Why hasn't the quarterly budget report been printed yet?",
+    "audioText": "Why hasn't the quarterly budget report been printed yet? (A) The network printer is out of toner. (B) Fifty full-color copies. (C) Next Tuesday afternoon.",
+    "transcript": "Why hasn't the quarterly budget report been printed yet? (A) The network printer is out of toner. (B) Fifty full-color copies. (C) Next Tuesday afternoon.",
+    "choices": [
+      "The network printer is out of toner.",
+      "Fifty full-color copies.",
+      "Next Tuesday afternoon."
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "question-response",
+    "explanation": "Câu hỏi 'Why' hỏi lý do, đáp án A giải thích nguyên nhân là máy in hết mực.",
+    "translation": "Tại sao báo cáo ngân sách quý vẫn chưa được in?"
+  },
+  {
+    "id": "ETS_P2_05",
+    "part": 2,
+    "section": "listening",
+    "prompt": "Could you help me set up the audiovisual projector in Room 3B?",
+    "audioText": "Could you help me set up the audiovisual projector in Room 3B? (A) Sure, as soon as I finish this phone call. (B) The projector was manufactured in Germany. (C) No, it wasn't very heavy.",
+    "transcript": "Could you help me set up the audiovisual projector in Room 3B? (A) Sure, as soon as I finish this phone call. (B) The projector was manufactured in Germany. (C) No, it wasn't very heavy.",
+    "choices": [
+      "Sure, as soon as I finish this phone call.",
+      "The projector was manufactured in Germany.",
+      "No, it wasn't very heavy."
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "question-response",
+    "explanation": "Lời yêu cầu giúp đỡ 'Could you help me...', phản hồi đồng ý 'Sure, as soon as I finish...' là câu trả lời trực tiếp và phù hợp nhất.",
+    "translation": "Bạn có thể giúp tôi lắp máy chiếu ở phòng 3B không?"
+  },
+  {
+    "id": "ETS_P3_01",
+    "part": 3,
+    "section": "listening",
+    "groupId": "ETS_P3_C01",
+    "prompt": "What is the woman concerned about?",
+    "choices": [
+      "An unexpected delivery delay",
+      "A cancelled flight reservation",
+      "An increase in office rent",
+      "A software licensing fee"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "conversations",
+    "explanation": "Người phụ nữ lo lắng về việc lô bàn ghế bị hoãn giao hàng (delivery delay).",
+    "translation": "Người phụ nữ lo lắng về điều gì?",
+    "audioText": "W: Mark, the supplier just notified us that the custom desks won't arrive until next Wednesday because of shipping delays. M: Oh no, the new engineering hires arrive this Monday! Where will they sit? W: We can borrow temporary tables from Conference Room C until the desks are delivered.",
+    "transcript": "W: Mark, the supplier just notified us that the custom desks won't arrive until next Wednesday because of shipping delays. M: Oh no, the new engineering hires arrive this Monday! Where will they sit? W: We can borrow temporary tables from Conference Room C until the desks are delivered."
+  },
+  {
+    "id": "ETS_P3_02",
+    "part": 3,
+    "section": "listening",
+    "groupId": "ETS_P3_C01",
+    "prompt": "When will the new employees start work?",
+    "choices": [
+      "This Monday",
+      "Next Wednesday",
+      "At the end of the month",
+      "In two weeks"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "conversations",
+    "explanation": "Người đàn ông nói: 'the new engineering hires arrive this Monday!'",
+    "translation": "Khi nào các nhân viên mới bắt đầu làm việc?",
+    "audioText": "W: Mark, the supplier just notified us that the custom desks won't arrive until next Wednesday because of shipping delays. M: Oh no, the new engineering hires arrive this Monday! Where will they sit? W: We can borrow temporary tables from Conference Room C until the desks are delivered.",
+    "transcript": "W: Mark, the supplier just notified us that the custom desks won't arrive until next Wednesday because of shipping delays. M: Oh no, the new engineering hires arrive this Monday! Where will they sit? W: We can borrow temporary tables from Conference Room C until the desks are delivered."
+  },
+  {
+    "id": "ETS_P3_03",
+    "part": 3,
+    "section": "listening",
+    "groupId": "ETS_P3_C01",
+    "prompt": "What does the woman propose doing?",
+    "choices": [
+      "Canceling the order with the supplier",
+      "Borrowing furniture from a conference room",
+      "Asking employees to work remotely",
+      "Rescheduling the onboarding date"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "conversations",
+    "explanation": "Người phụ nữ đề xuất mượn bàn tạm thời từ phòng họp C (borrow temporary tables from Conference Room C).",
+    "translation": "Người phụ nữ đề xuất làm gì?",
+    "audioText": "W: Mark, the supplier just notified us that the custom desks won't arrive until next Wednesday because of shipping delays. M: Oh no, the new engineering hires arrive this Monday! Where will they sit? W: We can borrow temporary tables from Conference Room C until the desks are delivered.",
+    "transcript": "W: Mark, the supplier just notified us that the custom desks won't arrive until next Wednesday because of shipping delays. M: Oh no, the new engineering hires arrive this Monday! Where will they sit? W: We can borrow temporary tables from Conference Room C until the desks are delivered."
+  },
+  {
+    "id": "ETS_P4_01",
+    "part": 4,
+    "section": "listening",
+    "groupId": "ETS_P4_T01",
+    "prompt": "Where is the announcement most likely taking place?",
+    "choices": [
+      "At an airport terminal",
+      "On a commuter ferry",
+      "At an intercity train station",
+      "In a subway station"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "talks",
+    "explanation": "Thông báo nhắc đến 'Track 4', 'express train to Boston', 'locomotive maintenance' nên là tại ga tàu hỏa liên tỉnh.",
+    "translation": "Thông báo có khả năng diễn ra ở đâu nhất?",
+    "audioText": "Attention passengers waiting for the 9:45 express train to Boston on Track 4. Due to routine locomotive maintenance, boarding will be delayed by approximately fifteen minutes. Please remain in the main concourse area until gate agents announce the commencement of boarding. Refreshment vouchers are available at Customer Service Desk B.",
+    "transcript": "Attention passengers waiting for the 9:45 express train to Boston on Track 4. Due to routine locomotive maintenance, boarding will be delayed by approximately fifteen minutes. Please remain in the main concourse area until gate agents announce the commencement of boarding. Refreshment vouchers are available at Customer Service Desk B."
+  },
+  {
+    "id": "ETS_P4_02",
+    "part": 4,
+    "section": "listening",
+    "groupId": "ETS_P4_T01",
+    "prompt": "What is the reason for the delay?",
+    "choices": [
+      "Adverse weather conditions",
+      "Locomotive maintenance",
+      "A track obstruction",
+      "A staffing shortage"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "talks",
+    "explanation": "Lý do là bảo trì đầu máy định kỳ (Due to routine locomotive maintenance).",
+    "translation": "Lý do của sự chậm trễ là gì?",
+    "audioText": "Attention passengers waiting for the 9:45 express train to Boston on Track 4. Due to routine locomotive maintenance, boarding will be delayed by approximately fifteen minutes. Please remain in the main concourse area until gate agents announce the commencement of boarding. Refreshment vouchers are available at Customer Service Desk B.",
+    "transcript": "Attention passengers waiting for the 9:45 express train to Boston on Track 4. Due to routine locomotive maintenance, boarding will be delayed by approximately fifteen minutes. Please remain in the main concourse area until gate agents announce the commencement of boarding. Refreshment vouchers are available at Customer Service Desk B."
+  },
+  {
+    "id": "ETS_P4_03",
+    "part": 4,
+    "section": "listening",
+    "groupId": "ETS_P4_T01",
+    "prompt": "What can passengers collect at Customer Service Desk B?",
+    "choices": [
+      "Complimentary train schedules",
+      "Refreshment vouchers",
+      "Luggage tags",
+      "Refunded tickets"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "talks",
+    "explanation": "Hành khách có thể nhận phiếu giải khát (Refreshment vouchers are available at Customer Service Desk B).",
+    "translation": "Hành khách có thể nhận gì ở Quầy Dịch vụ Khách hàng B?",
+    "audioText": "Attention passengers waiting for the 9:45 express train to Boston on Track 4. Due to routine locomotive maintenance, boarding will be delayed by approximately fifteen minutes. Please remain in the main concourse area until gate agents announce the commencement of boarding. Refreshment vouchers are available at Customer Service Desk B.",
+    "transcript": "Attention passengers waiting for the 9:45 express train to Boston on Track 4. Due to routine locomotive maintenance, boarding will be delayed by approximately fifteen minutes. Please remain in the main concourse area until gate agents announce the commencement of boarding. Refreshment vouchers are available at Customer Service Desk B."
+  }
+]
