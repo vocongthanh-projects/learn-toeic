@@ -306,9 +306,10 @@ export function getCleanSentenceTranslation(q: Question): string {
   }
 
   const existingTranslation = q.explanation?.translation;
-  // If translation is good and not a generic placeholder
+  // If translation is good and not a generic placeholder (and not leftover Chinese source text)
   if (
     existingTranslation &&
+    !/[一-龥]/.test(existingTranslation) &&
     !existingTranslation.includes('Câu hỏi kiểm tra ngữ pháp') &&
     !existingTranslation.includes('Đoạn văn và câu hỏi kiểm tra') &&
     !existingTranslation.includes('Câu hỏi & lời đáp đáp ứng đúng') &&
@@ -346,7 +347,11 @@ export function getCleanSentenceTranslation(q: Question): string {
     return `Nội dung bài đọc đưa ra câu trả lời chính xác là: "${correctWord}".`;
   }
 
-  return existingTranslation || `Phương án đúng: "${correctWord}".`;
+  if (q.part === 2 || q.part === 3 || q.part === 4) {
+    return `Đáp án đúng dựa trên nội dung nghe được là: "${correctWord}".`;
+  }
+
+  return `Phương án đúng: "${correctWord}".`;
 }
 
 // ==========================================
@@ -467,6 +472,16 @@ Căn cứ vào cấu trúc ngữ pháp trước và sau chỗ trống, phương 
     return `📌 Dẫn chứng trong bài đọc: "${quote || qText}"
 
 🎯 Đáp án đúng [${q.correctAnswer}] ("${correctWord}") được xác định dựa trên dẫn chứng trên. Hãy đối chiếu từ khóa trong câu hỏi với đoạn tương ứng trong bài đọc để xác nhận thông tin.`;
+  }
+
+  // Listening (Part 2-4): no per-question curated breakdown yet — quote the transcript
+  // (shown honestly as the source, not a claimed translation) and point at the correct answer.
+  if (q.part === 2 || q.part === 3 || q.part === 4) {
+    const transcript = q.transcript || '';
+    const label = q.part === 2 ? 'Câu hỏi nghe được' : 'Nội dung hội thoại/bài nói nghe được';
+    return `📌 ${label}: "${transcript}"
+
+🎯 Đáp án đúng [${q.correctAnswer}] ("${correctWord}") được xác định dựa trên nội dung nghe được ở trên. Hãy nghe lại và đối chiếu từ khóa để xác nhận thông tin.`;
   }
 
   return current;

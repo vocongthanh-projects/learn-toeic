@@ -468,6 +468,74 @@ export const TAXONOMY: Record<string, KnowledgeNode> = {
     quickTips: [
       '⚡ Khi câu hỏi nhắc đến 2 đối tượng ở 2 đoạn khác nhau $\\rightarrow$ 100% phải xâu chuỗi thông tin từ cả 2 nguồn.'
     ]
+  },
+
+  // --- LISTENING: PART 1 ---
+  'listening.part1.photo_description': {
+    id: 'listening.part1.photo_description',
+    parent: null,
+    name: 'Listening Part 1: Mô tả tranh',
+    category: 'trap_pattern',
+    description: 'Nghe 4 câu mô tả và chọn câu khớp nhất với bức ảnh cho sẵn.',
+    ruleSummary: 'Đáp án đúng thường mô tả hành động/vị trí tương quan giữa người và vật một cách khái quát, không quá chi tiết.',
+    keySignals: ['is/are + V-ing', 'has/have been + V3 (trạng thái)'],
+    commonMistakes: [
+      'Bị lừa bởi từ vựng quen thuộc (đồ vật xuất hiện trong ảnh) nhưng hành động mô tả sai với ảnh.'
+    ],
+    quickTips: [
+      '⚡ Loại ngay các câu nhắc đến vật/người không xuất hiện trong ảnh trước khi so hành động.'
+    ]
+  },
+
+  // --- LISTENING: PART 2 ---
+  'listening.part2.question_response': {
+    id: 'listening.part2.question_response',
+    parent: null,
+    name: 'Listening Part 2: Hỏi - Đáp',
+    category: 'trap_pattern',
+    description: 'Nghe 1 câu hỏi hoặc câu đề nghị, chọn 1 trong 3 phương án trả lời phù hợp nhất.',
+    ruleSummary: 'Câu hỏi Wh- (Who/Where/When/Why/What/How) không được trả lời bằng Yes/No.',
+    keySignals: ['Who', 'Where', 'When', 'Why', 'What', 'How', 'Could you...?'],
+    commonMistakes: [
+      'Dính bẫy từ lặp lại cùng gốc (same-word trap) hoặc trả lời Yes/No cho câu hỏi Wh-.'
+    ],
+    quickTips: [
+      '⚡ Nghe kỹ từ để hỏi đầu tiên — xác định đúng loại thông tin cần tìm (người/nơi chốn/thời gian/lý do).'
+    ]
+  },
+
+  // --- LISTENING: PART 3 ---
+  'listening.part3.conversation': {
+    id: 'listening.part3.conversation',
+    parent: null,
+    name: 'Listening Part 3: Hội thoại ngắn',
+    category: 'trap_pattern',
+    description: 'Nghe đoạn hội thoại giữa 2-3 người và trả lời 3 câu hỏi liên quan (chủ đề, chi tiết, hành động tiếp theo).',
+    ruleSummary: 'Đọc trước câu hỏi và đáp án trước khi nghe để biết cần chú ý thông tin gì trong hội thoại.',
+    keySignals: ['What are the speakers discussing?', 'What will the man/woman do next?'],
+    commonMistakes: [
+      'Không đọc trước câu hỏi nên bỏ lỡ thông tin quan trọng khi hội thoại trôi qua nhanh.'
+    ],
+    quickTips: [
+      '⚡ Ba câu hỏi thường theo đúng trình tự thông tin xuất hiện trong hội thoại — tận dụng để dự đoán vị trí câu trả lời.'
+    ]
+  },
+
+  // --- LISTENING: PART 4 ---
+  'listening.part4.talk': {
+    id: 'listening.part4.talk',
+    parent: null,
+    name: 'Listening Part 4: Bài nói/Thông báo ngắn',
+    category: 'trap_pattern',
+    description: 'Nghe một bài độc thoại (thông báo, quảng cáo, hướng dẫn) và trả lời 3 câu hỏi liên quan.',
+    ruleSummary: 'Câu hỏi đầu thường hỏi về chủ đề/mục đích chung, câu sau hỏi chi tiết cụ thể.',
+    keySignals: ['What is the purpose of the announcement?', 'What is being advertised?'],
+    commonMistakes: [
+      'Tập trung vào chi tiết nhỏ mà bỏ lỡ ý chính (chủ đề/mục đích) được hỏi ở câu đầu tiên.'
+    ],
+    quickTips: [
+      '⚡ Câu mở đầu bài nói thường chứa ngay chủ đề/mục đích — nghe kỹ 1-2 câu đầu tiên.'
+    ]
   }
 };
 

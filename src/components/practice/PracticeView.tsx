@@ -4,6 +4,7 @@ import type { Question, ConfidenceLevel, ErrorReason, Attempt, Passage } from '.
 import { ConfidenceSelector } from './ConfidenceSelector';
 import { LayeredExplanation } from './LayeredExplanation';
 import { PassageViewer } from './PassageViewer';
+import { AudioPlayer } from './AudioPlayer';
 import { QuestionNavDrawer } from './QuestionNavDrawer';
 import { QuestionNoteDrawer } from '../notes/QuestionNoteDrawer';
 import { recordQuestionAttempt, db } from '../../db';
@@ -288,7 +289,7 @@ export const PracticeView: React.FC<PracticeViewProps> = ({
               Tất cả Parts ({questions.length})
             </button>
 
-            {([5, 6, 7] as const).map(p => {
+            {([1, 2, 3, 4, 5, 6, 7] as const).map(p => {
               const count = partCounts[p];
               const isSelected = selectedPart === p;
 
@@ -375,7 +376,7 @@ export const PracticeView: React.FC<PracticeViewProps> = ({
       <div className="flex items-center justify-between text-xs text-slate-600 bg-white p-3.5 rounded-2xl border border-slate-200 shadow-xs">
         <div className="flex items-center gap-2 flex-wrap">
           <span className="px-2.5 py-1 rounded-lg font-bold border bg-blue-50 text-blue-700 border-blue-200">
-            Part {currentQuestion.part} • Reading
+            Part {currentQuestion.part} • {currentQuestion.part <= 4 ? 'Listening' : 'Reading'}
           </span>
 
           <span className="font-semibold text-slate-900 font-mono">
@@ -428,9 +429,30 @@ export const PracticeView: React.FC<PracticeViewProps> = ({
         </div>
       </div>
 
-      {/* 3. PASSAGE VIEWER (Cho Part 6, 7) */}
-      {currentPassage && (currentQuestion.part === 6 || currentQuestion.part === 7) && (
+      {/* 3. PASSAGE VIEWER (Cho Part 3, 4, 6, 7) */}
+      {currentPassage && [3, 4, 6, 7].includes(currentQuestion.part) && (
         <PassageViewer passage={currentPassage} part={currentQuestion.part} />
+      )}
+
+      {/* 3b. AUDIO + IMAGE (Cho Part 1, 2 — câu độc lập không có passage chung) */}
+      {!currentPassage && currentQuestion.part <= 2 && (
+        <div className="space-y-3">
+          {currentQuestion.part === 1 && currentQuestion.image && (
+            <div className="bg-white border border-slate-200 rounded-3xl p-3 shadow-xs">
+              <img
+                src={currentQuestion.image.startsWith('http') ? currentQuestion.image : `/${currentQuestion.image}`}
+                alt="Ảnh minh họa câu hỏi Part 1"
+                className="w-full max-h-96 object-cover rounded-2xl"
+              />
+            </div>
+          )}
+          {currentQuestion.audioUrl && (
+            <AudioPlayer
+              src={currentQuestion.audioUrl}
+              label={currentQuestion.part === 1 ? 'Nghe 4 mô tả (A, B, C, D)' : 'Nghe câu hỏi'}
+            />
+          )}
+        </div>
       )}
 
       {/* 4. MAIN QUESTION CARD */}
@@ -438,10 +460,18 @@ export const PracticeView: React.FC<PracticeViewProps> = ({
         {/* Question Text */}
         <div className="space-y-2">
           <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
-            {currentQuestion.part === 6 
-              ? 'Part 6 • Chọn từ/câu phù hợp nhất cho chỗ trống trong đoạn văn:' 
-              : currentQuestion.part === 7 
-              ? 'Part 7 • Đọc hiểu đoạn văn và chọn câu trả lời đúng:' 
+            {currentQuestion.part === 1
+              ? 'Part 1 • Nghe và chọn câu mô tả đúng bức ảnh:'
+              : currentQuestion.part === 2
+              ? 'Part 2 • Nghe câu hỏi và chọn phản hồi phù hợp nhất:'
+              : currentQuestion.part === 3
+              ? 'Part 3 • Nghe hội thoại và trả lời câu hỏi:'
+              : currentQuestion.part === 4
+              ? 'Part 4 • Nghe bài nói/thông báo và trả lời câu hỏi:'
+              : currentQuestion.part === 6
+              ? 'Part 6 • Chọn từ/câu phù hợp nhất cho chỗ trống trong đoạn văn:'
+              : currentQuestion.part === 7
+              ? 'Part 7 • Đọc hiểu đoạn văn và chọn câu trả lời đúng:'
               : 'Part 5 • Hoàn thành câu:'}
           </span>
           <h2 className="text-lg sm:text-xl font-semibold text-slate-900 leading-relaxed">

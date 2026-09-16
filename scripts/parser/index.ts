@@ -37,6 +37,13 @@ function resolvePassageBlanks(text?: string): string | undefined {
   return text.replace(/\{\{\s*\d+\s*\}\}/g, '_____');
 }
 
+// Some Part 4 talks are labeled "Speaker: ..." in the source — strip the label so
+// text-to-speech doesn't read the word "Speaker" out loud as if it were part of the talk.
+function stripSpeakerLabel(text?: string): string | undefined {
+  if (!text) return text;
+  return text.replace(/^Speaker:\s*/, '');
+}
+
 export function parseAllSources(rootDir: string): ParseResult {
   const sourcesDir = path.join(rootDir, 'scripts/sources');
   const allQuestions: ParsedItem[] = [];
@@ -230,7 +237,7 @@ function parseSource3(
           type: part === 3 ? 'conversation' : part === 4 ? 'talk' : part === 6 ? 'incomplete_text' : 'single_passage',
           title: item.category || '',
           content: resolvePassageBlanks(item.passage) || undefined,
-          transcript: item.audioText || undefined,
+          transcript: stripSpeakerLabel(item.audioText) || undefined,
           questionIds: [],
         });
       }
@@ -245,7 +252,7 @@ function parseSource3(
       rawAnswer: item.answer,
       passageId,
       image: item.image,
-      transcript: item.audioText,
+      transcript: stripSpeakerLabel(item.audioText),
       rawDifficulty: item.difficulty,
       rawExplanation: item.explanation,
       rawTranslation: item.translation || item.answerTranslation,

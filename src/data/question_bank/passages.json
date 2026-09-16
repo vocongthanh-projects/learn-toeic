@@ -2704,6 +2704,816 @@
     ]
   },
   {
+    "id": "ETS_P3_C01",
+    "testId": "sample",
+    "part": 3,
+    "type": "conversation",
+    "transcript": "W: Mark, the supplier just notified us that the custom desks won't arrive until next Wednesday because of shipping delays. M: Oh no, the new engineering hires arrive this Monday! Where will they sit? W: We can borrow temporary tables from Conference Room C until the desks are delivered.",
+    "questionIds": [
+      "ETS_P3_01",
+      "ETS_P3_02",
+      "ETS_P3_03"
+    ],
+    "audioUrl": "/audio/listening/ETS_P3_C01.mp3"
+  },
+  {
+    "id": "s3_P3-G01",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "會議安排",
+    "transcript": "W: Hi, Daniel. The client moved tomorrow's product presentation from 10 A.M. to 2 P.M. M: Thanks for letting me know. I'll update the room reservation and notify the design team. W: Great. Please ask them to bring the revised brochures.",
+    "questionIds": [
+      "s3_P3-011",
+      "s3_P3-012",
+      "s3_P3-013"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G01.mp3"
+  },
+  {
+    "id": "s3_P3-G02",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "飯店訂房",
+    "transcript": "M: Good afternoon. I have a reservation under the name Chen, but my flight arrives after midnight. W: That's fine. I'll mark your reservation for late arrival. Would you also like us to arrange airport transportation? M: Yes, please. That would be very helpful.",
+    "questionIds": [
+      "s3_P3-021",
+      "s3_P3-022",
+      "s3_P3-023"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G02.mp3"
+  },
+  {
+    "id": "s3_P3-G03",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "物流延誤",
+    "transcript": "W: We received a message from our shipping company. The office chairs won't arrive until Friday because of a storm. M: That's a problem. The new employees start on Thursday. W: We can move some chairs from the training room temporarily.",
+    "questionIds": [
+      "s3_P3-031",
+      "s3_P3-032",
+      "s3_P3-033"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G03.mp3"
+  },
+  {
+    "id": "s3_P3-G04",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "求職面試",
+    "transcript": "M: Ms. Owens, your résumé shows extensive experience in international sales. Could you tell me about your work in Singapore? W: Certainly. I managed a team of twelve and helped increase regional revenue by eighteen percent. M: Impressive. The next step is a video interview with our vice president.",
+    "questionIds": [
+      "s3_P3-041",
+      "s3_P3-042",
+      "s3_P3-043"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G04.mp3"
+  },
+  {
+    "id": "s3_P3-G05",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "設備維修",
+    "transcript": "W: The coffee machine in the employee lounge is leaking again. M: I'll call the repair company, but they may not come until tomorrow. W: In that case, let's put up a sign and move the smaller machine from the second floor.",
+    "questionIds": [
+      "s3_P3-051",
+      "s3_P3-052",
+      "s3_P3-053"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G05.mp3"
+  },
+  {
+    "id": "s3_P3-G06",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "行銷活動",
+    "transcript": "M: The online advertisement attracted more visitors than expected, but few of them completed a purchase. W: Perhaps the checkout process is too complicated. We should ask the Web team to review it. M: Agreed. I'll also compare our prices with those of our competitors.",
+    "questionIds": [
+      "s3_P3-061",
+      "s3_P3-062",
+      "s3_P3-063"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G06.mp3"
+  },
+  {
+    "id": "s3_P3-G07",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "訂單修改",
+    "transcript": "W: Hello, I'm calling about order 7615. We need thirty notebooks instead of twenty. M: I can update the quantity, but the delivery date may move from Tuesday to Wednesday. W: Wednesday is fine, as long as the boxes arrive before noon.",
+    "questionIds": [
+      "s3_P3-071",
+      "s3_P3-072",
+      "s3_P3-073"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G07.mp3"
+  },
+  {
+    "id": "s3_P3-G08",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "簡報設備",
+    "transcript": "M: I tested the projector in Conference Room C, but the image is still too dark. W: The larger projector is available in Room A. We could move the presentation there. M: Good idea. I'll tell the attendees about the room change.",
+    "questionIds": [
+      "s3_P3-081",
+      "s3_P3-082",
+      "s3_P3-083"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G08.mp3"
+  },
+  {
+    "id": "s3_P3-G09",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "員工訓練",
+    "transcript": "W: The customer service workshop is almost full. Should we add a second session next week? M: Yes. Wednesday afternoon is open in the training room. W: Great. I'll ask Human Resources to send another announcement.",
+    "questionIds": [
+      "s3_P3-G09-Q1",
+      "s3_P3-G09-Q2",
+      "s3_P3-G09-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G09.mp3"
+  },
+  {
+    "id": "s3_P3-G10",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "餐廳設備",
+    "transcript": "M: The refrigerator in the restaurant kitchen isn't maintaining the correct temperature. W: I called the service company, but their technician cannot come until Friday. M: Then we should move the dairy products to the smaller refrigerator in the bakery.",
+    "questionIds": [
+      "s3_P3-G10-Q1",
+      "s3_P3-G10-Q2",
+      "s3_P3-G10-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G10.mp3"
+  },
+  {
+    "id": "s3_P3-G11",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "差旅安排",
+    "transcript": "W: I found a morning flight to Osaka, but it leaves at six ten. M: That's early. Is there a later flight that arrives before the conference dinner? W: Yes, one leaves at nine and arrives at noon. It costs thirty dollars more.",
+    "questionIds": [
+      "s3_P3-G11-Q1",
+      "s3_P3-G11-Q2",
+      "s3_P3-G11-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G11.mp3"
+  },
+  {
+    "id": "s3_P3-G12",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "網站更新",
+    "transcript": "M: The product photos on our website look blurry on mobile phones. W: I can resize the image files this afternoon. We should also test the pages on several screen sizes. M: Good. Please finish before the online sale begins tomorrow.",
+    "questionIds": [
+      "s3_P3-G12-Q1",
+      "s3_P3-G12-Q2",
+      "s3_P3-G12-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G12.mp3"
+  },
+  {
+    "id": "s3_P3-G13",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "辦公室搬遷",
+    "transcript": "W: The accounting team is moving to the sixth floor on Monday. M: Then we need to update the directory in the lobby. W: I'll also send a message to our regular delivery companies.",
+    "questionIds": [
+      "s3_P3-G13-Q1",
+      "s3_P3-G13-Q2",
+      "s3_P3-G13-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G13.mp3"
+  },
+  {
+    "id": "s3_P3-G14",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "商品攝影",
+    "transcript": "M: The photos for the winter catalog are scheduled for Thursday, but the sample coats haven't arrived. W: The supplier says they will be delivered tomorrow morning. M: Good. Please check every item as soon as the boxes arrive.",
+    "questionIds": [
+      "s3_P3-G14-Q1",
+      "s3_P3-G14-Q2",
+      "s3_P3-G14-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G14.mp3"
+  },
+  {
+    "id": "s3_P3-G15",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "印刷訂單",
+    "transcript": "W: The brochures for Monday's event arrived, but the company logo is missing from the back page. M: I'll contact the printer immediately. Do we have time for a corrected delivery? W: Yes, as long as it arrives by Friday afternoon.",
+    "questionIds": [
+      "s3_P3-G15-Q1",
+      "s3_P3-G15-Q2",
+      "s3_P3-G15-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G15.mp3"
+  },
+  {
+    "id": "s3_P3-G16",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "客戶軟體展示",
+    "transcript": "M: The client wants us to demonstrate the reporting feature during tomorrow's video call. W: Then we should use the test account rather than real customer data. M: Agreed. I'll prepare a sample report and send you the login information.",
+    "questionIds": [
+      "s3_P3-G16-Q1",
+      "s3_P3-G16-Q2",
+      "s3_P3-G16-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G16.mp3"
+  },
+  {
+    "id": "s3_P3-G17",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "商店陳列",
+    "transcript": "W: The summer display near the entrance is blocking the view of the new arrivals. M: We could move it beside the escalator. There's more space there. W: Good. I'll ask the evening staff to relocate it after closing.",
+    "questionIds": [
+      "s3_P3-G17-Q1",
+      "s3_P3-G17-Q2",
+      "s3_P3-G17-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G17.mp3"
+  },
+  {
+    "id": "s3_P3-052",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "對話",
+    "transcript": "M: Did the security update finish on the reception tablets?\nW: Not yet. The network team found a compatibility issue with the older models.\nM: We have visitors arriving at nine tomorrow. Can we use the backup login page?\nW: Yes, but I will ask the team to test it again this afternoon.",
+    "questionIds": [
+      "s3_P3-052-Q1",
+      "s3_P3-052-Q2",
+      "s3_P3-052-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-052.mp3"
+  },
+  {
+    "id": "s3_P3-G18",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "對話",
+    "transcript": "M: Did the security update finish on the reception tablets?\nW: Not yet. The network team found a compatibility issue with the older models.\nM: We have visitors arriving at nine tomorrow. Can we use the backup login page?\nW: Yes, but I will ask the team to test it again this afternoon.",
+    "questionIds": [
+      "s3_P3-052-Q4",
+      "s3_P3-G18-Q2",
+      "s3_P3-G18-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G18.mp3"
+  },
+  {
+    "id": "s3_P3-053",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "員工訓練",
+    "transcript": "M: The safety training video is ready, but the captions are not matching the audio.\nW: Thanks for checking. The vendor sent a corrected file this morning.\nM: Should I upload it to the learning portal now?\nW: Please do. The warehouse staff need to complete the course by Friday.",
+    "questionIds": [
+      "s3_P3-053-Q1",
+      "s3_P3-053-Q2",
+      "s3_P3-053-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-053.mp3"
+  },
+  {
+    "id": "s3_P3-054",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "線上研討會",
+    "transcript": "M: The webinar test looks clear, but the captions are appearing about five seconds late.\nW: I noticed that too. The streaming platform has a sync setting we can adjust.\nM: Good. Can you fix it before the Australian office joins the rehearsal?\nW: Yes, I will update it and run another test in ten minutes.",
+    "questionIds": [
+      "s3_P3-054-Q1",
+      "s3_P3-054-Q2",
+      "s3_P3-054-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-054.mp3"
+  },
+  {
+    "id": "s3_P3-055",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "客服系統更新",
+    "transcript": "W: I just checked the support dashboard, and three tickets are missing customer names.\nM: That usually happens when the mobile form is submitted too quickly.\nW: Can you add a required-field warning before today's update goes live?\nM: Yes. I will add it and test the form within the hour.",
+    "questionIds": [
+      "s3_P3-055-Q1",
+      "s3_P3-055-Q2",
+      "s3_P3-055-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-055.mp3"
+  },
+  {
+    "id": "s3_P3-056",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "辦公室搬遷",
+    "transcript": "M: The analytics team is relocating to the fourth floor on Monday.\nW: I reserved twelve desks, but only eight monitors have arrived.\nM: We can borrow four from the training room until the shipment comes in.\nW: Great. I will label the desks and ask facilities to install the docking stations.",
+    "questionIds": [
+      "s3_P3-056-Q1",
+      "s3_P3-056-Q2",
+      "s3_P3-056-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-056.mp3"
+  },
+  {
+    "id": "s3_P3-057",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "供應商簡報",
+    "transcript": "M: Hi, this is Daniel from Northstar Supplies. I cannot open the presentation file you sent.\nW: Sorry about that. It may be too large for your email server.\nM: Could you upload it to the vendor portal instead?\nW: Of course. I will upload it now and send you a temporary password.",
+    "questionIds": [
+      "s3_P3-057-Q1",
+      "s3_P3-057-Q2",
+      "s3_P3-057-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-057.mp3"
+  },
+  {
+    "id": "s3_P3-G19",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "AI 會議逐字稿",
+    "transcript": "W: Did you enable automatic transcription for tomorrow's client briefing?\nM: Not yet. The legal department says we need each guest's consent before recording.\nW: Then I'll add a consent notice to the invitation and ask the account manager to confirm with the guests.\nM: Good. Once she replies, I can set the assistant to delete the recording after thirty days.",
+    "questionIds": [
+      "s3_P3-G19-Q1",
+      "s3_P3-G19-Q2",
+      "s3_P3-G19-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G19.mp3"
+  },
+  {
+    "id": "s3_P3-G20",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "電動車充電設備",
+    "transcript": "M: The facilities dashboard shows that two chargers in the parking garage are offline.\nW: The contractor found water damage in the control cabinet. A replacement part will arrive Thursday morning.\nM: Our finance workshop starts at ten that day, and several visitors said they will drive electric cars.\nW: I'll reserve four spaces at the public charging lot across the street and include a map in the reminder.",
+    "questionIds": [
+      "s3_P3-G20-Q1",
+      "s3_P3-G20-Q2",
+      "s3_P3-G20-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G20.mp3"
+  },
+  {
+    "id": "s3_P3-G21",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "無密碼登入",
+    "transcript": "W: Are the warehouse tablets ready for passkey sign-in?\nM: The pilot worked on the newer devices, but twelve older scanners cannot install the security update.\nW: The leased replacements are scheduled to arrive Tuesday. What should the night shift use until then?\nM: I'll issue temporary security keys and leave a sign-out sheet with the supervisor.",
+    "questionIds": [
+      "s3_P3-G21-Q1",
+      "s3_P3-G21-Q2",
+      "s3_P3-G21-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G21.mp3"
+  },
+  {
+    "id": "s3_P3-G22",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "智慧訪客通行",
+    "transcript": "W: The visitor badges for tomorrow's supplier tour still show the old entrance.\nM: That's because the lobby scanners were moved while the security desk is being renovated. Guests should use the east entrance this week.\nW: I already sent the itinerary. Should I send a corrected version?\nM: Yes, and please add the temporary access code. It expires at noon, just after the tour ends.",
+    "questionIds": [
+      "s3_P3-G22-Q1",
+      "s3_P3-G22-Q2",
+      "s3_P3-G22-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G22.mp3"
+  },
+  {
+    "id": "s3_P3-G23",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "混合會議字幕",
+    "transcript": "M: Have we confirmed live captions for Friday's product demonstration? Two clients will join from overseas.\nW: The captioning vendor is available, but its quote covers English only. One client requested Japanese translation.\nM: Our Tokyo office has an interpreter on staff. Could she join remotely for the question-and-answer session?\nW: I'll ask her. If she is available, we can keep the vendor for the main presentation and avoid changing the schedule.",
+    "questionIds": [
+      "s3_P3-G23-Q1",
+      "s3_P3-G23-Q2",
+      "s3_P3-G23-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G23.mp3"
+  },
+  {
+    "id": "s3_P3-G24",
+    "testId": "community_bank",
+    "part": 3,
+    "type": "conversation",
+    "title": "資安試行評估",
+    "transcript": "W: The phishing-simulation report says the finance team clicked fewer test links this month, but more employees entered passwords after clicking. M: So the click rate improved, but the risky behavior became more serious. Should we still end the pilot on Friday? W: Not yet. The report covers only two weeks, and several new hires have not taken the security workshop. M: I'll extend the pilot through the workshop next Wednesday and ask the analyst to separate new-hire results.",
+    "questionIds": [
+      "s3_P3-G24-Q1",
+      "s3_P3-G24-Q2",
+      "s3_P3-G24-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P3-G24.mp3"
+  },
+  {
+    "id": "ETS_P4_T01",
+    "testId": "sample",
+    "part": 4,
+    "type": "talk",
+    "transcript": "Attention passengers waiting for the 9:45 express train to Boston on Track 4. Due to routine locomotive maintenance, boarding will be delayed by approximately fifteen minutes. Please remain in the main concourse area until gate agents announce the commencement of boarding. Refreshment vouchers are available at Customer Service Desk B.",
+    "questionIds": [
+      "ETS_P4_01",
+      "ETS_P4_02",
+      "ETS_P4_03"
+    ],
+    "audioUrl": "/audio/listening/ETS_P4_T01.mp3"
+  },
+  {
+    "id": "s3_P4-G01",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "交通公告",
+    "transcript": "Attention passengers. The 8:15 train to Riverside will depart twenty minutes late because maintenance crews are inspecting the tracks. Passengers may use their current tickets on the 8:30 express train at no additional charge.",
+    "questionIds": [
+      "s3_P4-011",
+      "s3_P4-012",
+      "s3_P4-013"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-G01.mp3"
+  },
+  {
+    "id": "s3_P4-G02",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "語音留言",
+    "transcript": "Hello, this is Karen from Apex Office Supplies. I'm calling about order 5842. The blue folders are temporarily out of stock, so we can send green ones today or ship the blue folders next Monday. Please call me before 4 P.M. to let me know which option you prefer.",
+    "questionIds": [
+      "s3_P4-021",
+      "s3_P4-022",
+      "s3_P4-023"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-G02.mp3"
+  },
+  {
+    "id": "s3_P4-G03",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "場館公告",
+    "transcript": "Welcome to the City Design Museum. The photography exhibit on the second floor opens at 10:30. Guided tours begin every hour in the main lobby. Please note that food and beverages are not permitted inside the galleries.",
+    "questionIds": [
+      "s3_P4-031",
+      "s3_P4-032",
+      "s3_P4-033"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-G03.mp3"
+  },
+  {
+    "id": "s3_P4-G04",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "公司安全",
+    "transcript": "This is a reminder that the west stairwell will be closed tomorrow from 9 A.M. until 1 P.M. for safety inspections. During that time, employees should use the elevators near the cafeteria or the east stairwell. Deliveries should enter through the loading dock on Pine Street.",
+    "questionIds": [
+      "s3_P4-041",
+      "s3_P4-042",
+      "s3_P4-043"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-G04.mp3"
+  },
+  {
+    "id": "s3_P4-G05",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "商店公告",
+    "transcript": "Good morning, shoppers. Beginning today, the home appliance department has moved from the third floor to the newly renovated second floor. To celebrate, all small kitchen appliances are fifteen percent off through Sunday. Please ask a sales associate for assistance.",
+    "questionIds": [
+      "s3_P4-051",
+      "s3_P4-052",
+      "s3_P4-053"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-G05.mp3"
+  },
+  {
+    "id": "s3_P4-G06",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "會議開場",
+    "transcript": "Before we begin today's safety workshop, please sign the attendance sheet near the entrance and collect a training booklet. The morning session will end at eleven forty-five, followed by lunch in the cafeteria. The afternoon demonstration will take place outdoors, so please bring your identification badge.",
+    "questionIds": [
+      "s3_P4-061",
+      "s3_P4-062",
+      "s3_P4-063"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-G06.mp3"
+  },
+  {
+    "id": "s3_P4-G07",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "辦公室公告",
+    "transcript": "Employees on the fourth floor should be aware that the water supply will be turned off tomorrow from ten A.M. until noon while a pipe is replaced. Restrooms on the third and fifth floors will remain available. Please direct any questions to the facilities department.",
+    "questionIds": [
+      "s3_P4-G07-Q1",
+      "s3_P4-G07-Q2",
+      "s3_P4-G07-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-G07.mp3"
+  },
+  {
+    "id": "s3_P4-G08",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "商務活動",
+    "transcript": "Thank you for attending the Regional Entrepreneurs Conference. The keynote speech will begin in the Grand Hall at nine thirty. After the speech, participants may choose from three smaller workshops. A schedule and room map are included inside your name badge holder.",
+    "questionIds": [
+      "s3_P4-G08-Q1",
+      "s3_P4-G08-Q2",
+      "s3_P4-G08-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-G08.mp3"
+  },
+  {
+    "id": "s3_P4-G09",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "商店語音",
+    "transcript": "Thank you for calling Martin's Furniture. Our showroom is open Monday through Saturday from nine to six. For information about an existing delivery, press one. To schedule a design consultation, press two. To speak with a billing representative, remain on the line.",
+    "questionIds": [
+      "s3_P4-G09-Q1",
+      "s3_P4-G09-Q2",
+      "s3_P4-G09-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-G09.mp3"
+  },
+  {
+    "id": "s3_P4-G10",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "機場公告",
+    "transcript": "Passengers traveling on Flight 482 to Vancouver should proceed to Gate 16. Boarding will begin at five forty instead of five twenty because the aircraft arrived late. Passengers requiring assistance may speak with an agent at the service desk beside the gate.",
+    "questionIds": [
+      "s3_P4-G10-Q1",
+      "s3_P4-G10-Q2",
+      "s3_P4-G10-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-G10.mp3"
+  },
+  {
+    "id": "s3_P4-G11",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "大樓公告",
+    "transcript": "The main lobby information desk will close at four o'clock today for staff training. Visitors arriving after four should check in with the security officer at the south entrance. The information desk will reopen at its normal time tomorrow morning.",
+    "questionIds": [
+      "s3_P4-G11-Q1",
+      "s3_P4-G11-Q2",
+      "s3_P4-G11-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-G11.mp3"
+  },
+  {
+    "id": "s3_P4-G12",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "產品說明",
+    "transcript": "Thank you for purchasing the CleanAir 500 purifier. Before first use, remove the protective covering from the filter and place the unit at least thirty centimeters from a wall. The indicator light will turn orange when the filter needs to be replaced. Replacement filters can be ordered through our website.",
+    "questionIds": [
+      "s3_P4-G12-Q1",
+      "s3_P4-G12-Q2",
+      "s3_P4-G12-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-G12.mp3"
+  },
+  {
+    "id": "s3_P4-G13",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "圖書館公告",
+    "transcript": "The second-floor study area will be unavailable from one to three this afternoon while new lighting is installed. Visitors may use the quiet room on the first floor during that period. Group study rooms are not affected and will remain open.",
+    "questionIds": [
+      "s3_P4-G13-Q1",
+      "s3_P4-G13-Q2",
+      "s3_P4-G13-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-G13.mp3"
+  },
+  {
+    "id": "s3_P4-G14",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "飯店語音",
+    "transcript": "Welcome to the Grand Meridian Hotel. Breakfast is served in the Garden Restaurant from six thirty to ten. Guests who have booked an airport shuttle should meet the driver in the east lobby ten minutes before departure. For late checkout requests, please contact the front desk before eleven A.M.",
+    "questionIds": [
+      "s3_P4-G14-Q1",
+      "s3_P4-G14-Q2",
+      "s3_P4-G14-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-G14.mp3"
+  },
+  {
+    "id": "s3_P4-G15",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "公司活動",
+    "transcript": "This Friday's employee volunteer event will begin at eight thirty in the north parking lot. Buses will transport participants to the Riverside Park cleanup site. Gloves and trash bags will be provided, but volunteers should bring drinking water and wear comfortable shoes.",
+    "questionIds": [
+      "s3_P4-G15-Q1",
+      "s3_P4-G15-Q2",
+      "s3_P4-G15-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-G15.mp3"
+  },
+  {
+    "id": "s3_P4-046",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "公告",
+    "transcript": "Good morning. Beginning Monday, employees who visit the client center may use the company mobile app to check in at the lobby kiosk. After opening the app, select Client Center Visit and scan the code displayed on the kiosk screen. A printed badge will still be required, so please pick it up before entering the meeting area. If you have trouble with the app, ask the reception team for assistance.",
+    "questionIds": [
+      "s3_P4-046-Q1",
+      "s3_P4-046-Q2",
+      "s3_P4-046-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-046.mp3"
+  },
+  {
+    "id": "s3_P4-047",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "旅客服務公告",
+    "transcript": "Attention hotel guests. Due to construction near the main entrance, airport shuttle pickup will move to the north entrance beginning this evening. Please follow the blue signs through the lobby and arrive at least five minutes before your scheduled departure. Staff members will be available to assist guests with luggage.",
+    "questionIds": [
+      "s3_P4-047-Q1",
+      "s3_P4-047-Q2",
+      "s3_P4-047-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-047.mp3"
+  },
+  {
+    "id": "s3_P4-048",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "公司公告",
+    "transcript": "Attention all employees. The lobby check-in kiosk will be offline tomorrow while a software patch is installed. During this time, visitors should check in at the security desk and show a photo ID. Employees expecting guests should send the guest list to reception by 5 P.M. today.",
+    "questionIds": [
+      "s3_P4-048-Q1",
+      "s3_P4-048-Q2",
+      "s3_P4-048-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-048.mp3"
+  },
+  {
+    "id": "s3_P4-049",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "語音留言",
+    "transcript": "Hello, this is Marisa from BrightLine Office Equipment. I am calling to let you know that your color printer has been repaired and is ready for pickup. The technician also replaced the paper tray at no additional charge. Please bring your service receipt when you come to our store.",
+    "questionIds": [
+      "s3_P4-049-Q1",
+      "s3_P4-049-Q2",
+      "s3_P4-049-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-049.mp3"
+  },
+  {
+    "id": "s3_P4-050",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "活動介紹",
+    "transcript": "Registration is now open for the Saturday workshop, Managing Remote Project Teams. The session is designed for new project managers and will include practical exercises on scheduling, feedback, and conflict resolution. Register by Friday to receive a 15 percent discount and a digital workbook.",
+    "questionIds": [
+      "s3_P4-050-Q1",
+      "s3_P4-050-Q2",
+      "s3_P4-050-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-050.mp3"
+  },
+  {
+    "id": "s3_P4-G16",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "倉儲無人機公告",
+    "transcript": "Attention, distribution staff. Starting Monday, small indoor drones will scan shelf labels after the warehouse closes. Please keep the main aisles clear by eight thirty P.M. During the first week, technicians will be on site to monitor each flight. If a drone stops unexpectedly, do not move it. Submit an incident through the operations app. Manual cycle counts will continue in the refrigerated zone until its safety test is complete.",
+    "questionIds": [
+      "s3_P4-G16-Q1",
+      "s3_P4-G16-Q2",
+      "s3_P4-G16-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-G16.mp3"
+  },
+  {
+    "id": "s3_P4-G17",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "循環包裝計畫",
+    "transcript": "This message is for suppliers enrolled in our reusable-packaging program. Beginning August first, eligible deliveries should arrive in the blue tracking totes. Scan the barcode on each tote when it is received, and return the empty container within ten business days. Report damaged containers through the supplier portal rather than sending them back. A packaging discount will appear on the invoice following each completed return.",
+    "questionIds": [
+      "s3_P4-G17-Q1",
+      "s3_P4-G17-Q2",
+      "s3_P4-G17-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-G17.mp3"
+  },
+  {
+    "id": "s3_P4-G18",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "交通應用程式更新",
+    "transcript": "Please note that the MetroLink mobile ticketing app will be unavailable this Sunday from one to four A.M. while we install a security upgrade. Ticket kiosks at all stations will remain in service. Tickets purchased before the outage and saved on a device can still be displayed to station staff. Monthly-pass users do not need to take any action. When the updated app returns on Monday, it will also provide alerts when a train's departure platform changes.",
+    "questionIds": [
+      "s3_P4-G18-Q1",
+      "s3_P4-G18-Q2",
+      "s3_P4-G18-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-G18.mp3"
+  },
+  {
+    "id": "s3_P4-G19",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "行李追蹤更新",
+    "transcript": "Travelers arriving on Flight 482 should collect checked luggage at Carousel Six. Because one scanning station is being repaired, the airline's mobile app may show a baggage update several minutes late. Please rely on the display above the carousel for the most current information. Oversized items, including bicycles and musical instruments, will be delivered to the service counter beside Carousel Eight. Keep your baggage receipt until you have collected all of your items.",
+    "questionIds": [
+      "s3_P4-G19-Q1",
+      "s3_P4-G19-Q2",
+      "s3_P4-G19-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-G19.mp3"
+  },
+  {
+    "id": "s3_P4-G20",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "門市太陽能維護",
+    "transcript": "Good morning, store managers. The energy-monitoring portal will be offline tonight from nine until midnight while technicians recalibrate the rooftop solar meters. This work will not interrupt electricity in any store. However, automated energy reports scheduled during that period will be generated tomorrow morning instead. Managers do not need to submit manual readings unless an alert remains visible after the portal returns. A short guide to the updated dashboard will be posted in the operations library on Friday.",
+    "questionIds": [
+      "s3_P4-G20-Q1",
+      "s3_P4-G20-Q2",
+      "s3_P4-G20-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-G20.mp3"
+  },
+  {
+    "id": "s3_P4-G21",
+    "testId": "community_bank",
+    "part": 4,
+    "type": "talk",
+    "title": "接駁路線公告",
+    "transcript": "Attention, visitors to the Harbor Design Fair. Because the pedestrian tunnel beneath Central Avenue is closed for an inspection, the west entrance cannot be reached from the Metro station by the usual route. Complimentary shuttle buses will leave the station's north exit every twelve minutes and stop beside Hall C. The digital map in yesterday's confirmation e-mail still shows the tunnel route, so please disregard it. Visitors who already have printed tickets may board the shuttle without checking in at the information desk.",
+    "questionIds": [
+      "s3_P4-G21-Q1",
+      "s3_P4-G21-Q2",
+      "s3_P4-G21-Q3"
+    ],
+    "audioUrl": "/audio/listening/s3_P4-G21.mp3"
+  },
+  {
     "id": "s3_P6-G17",
     "testId": "community_bank",
     "part": 6,

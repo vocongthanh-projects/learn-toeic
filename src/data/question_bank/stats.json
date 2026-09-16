@@ -1,8 +1,12 @@
 {
-  "totalQuestions": 1405,
-  "totalPassages": 249,
+  "totalQuestions": 1718,
+  "totalPassages": 307,
   "totalTests": 10,
   "byPart": {
+    "1": 25,
+    "2": 114,
+    "3": 93,
+    "4": 81,
     "5": 508,
     "6": 216,
     "7": 681
@@ -18,13 +22,14 @@
     "test_08": 102,
     "test_09": 100,
     "test_10": 102,
-    "practice_bank": 401
+    "practice_bank": 714
   },
   "bySource": {
     "Open TOEIC Practice (Maxim Cuynat)": 600,
-    "TOEIC Question Ocean (kdeppaei)": 805
+    "TOEIC Question Ocean (kdeppaei)": 1107,
+    "ETS TOEIC Public Examinee Handbook & Official Practice Sets": 11
   },
   "duplicatesRemoved": 0,
   "missingExplanationCount": 0,
-  "generatedAt": "2026-09-07T01:10:26.537Z"
+  "generatedAt": "2026-09-16T02:03:22.050Z"
 }

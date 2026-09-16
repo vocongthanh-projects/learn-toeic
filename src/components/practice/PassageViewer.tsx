@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FileText, MessageSquare, Newspaper, Mail, Bell, Type } from 'lucide-react';
 import type { Passage } from '../../types';
+import { AudioPlayer } from './AudioPlayer';
 
 interface PassageViewerProps {
   passage: Passage;
@@ -42,7 +43,14 @@ export const PassageViewer: React.FC<PassageViewerProps> = ({ passage, part }) =
   const textContent = passage.content || passage.transcript || '';
 
   return (
-    <div className="bg-white rounded-3xl border border-slate-200 shadow-xs overflow-hidden flex flex-col">
+    <div className="space-y-3">
+      {passage.audioUrl && (
+        <AudioPlayer
+          src={passage.audioUrl}
+          label={part === 3 ? 'Nghe đoạn hội thoại' : 'Nghe bài nói/thông báo'}
+        />
+      )}
+      <div className="bg-white rounded-3xl border border-slate-200 shadow-xs overflow-hidden flex flex-col">
       {/* Passage Header */}
       <div className="flex items-center justify-between px-5 py-3.5 bg-slate-50 border-b border-slate-200">
         <div className="flex items-center gap-2">
@@ -139,6 +147,7 @@ export const PassageViewer: React.FC<PassageViewerProps> = ({ passage, part }) =
       <div className="px-5 py-2 bg-slate-50/70 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
         <span>Cuộn lên / xuống để đọc trọn vẹn văn bản</span>
         <span className="font-mono">{passage.questionIds.length} câu hỏi liên kết</span>
+      </div>
       </div>
     </div>
   );

@@ -12,11 +12,8 @@ async function buildQuestionBank() {
 
   // 1. Data Acquisition & Parsing
   console.log('Step 1: Parsing raw sources...');
-  const { questions: allRawQuestions, passages: allRawPassages } = parseAllSources(rootDir);
-  // Keep only Reading (Part 5, Part 6, Part 7)
-  const rawQuestions = allRawQuestions.filter(q => q.part >= 5);
-  const rawPassages = allRawPassages.filter(p => p.part >= 5);
-  console.log(`  ✓ Parsed ${rawQuestions.length} Reading questions and ${rawPassages.length} Reading passages (Listening removed).`);
+  const { questions: rawQuestions, passages: rawPassages } = parseAllSources(rootDir);
+  console.log(`  ✓ Parsed ${rawQuestions.length} questions and ${rawPassages.length} passages (Listening Part 1-4 + Reading Part 5-7).`);
 
   // 2. Normalization
   console.log('Step 2: Normalizing questions...');
@@ -84,7 +81,7 @@ function assembleTests(
   }
 
   // Bucket questions by part (cloned to mutate safely)
-  const poolByPart: Record<number, Question[]> = { 5: [], 6: [], 7: [] };
+  const poolByPart: Record<number, Question[]> = { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [] };
   for (const q of questions) {
     if (poolByPart[q.part]) {
       poolByPart[q.part].push(q);
@@ -177,7 +174,9 @@ function assembleTests(
   }
 
   // Any remaining questions in pools stay in the general practice bank
-  for (let part = 5; part <= 7; part++) {
+  // (Listening Part 1-4 always lands here — there isn't enough volume yet to
+  // assemble full 10x Listening sections alongside the Reading tests above.)
+  for (let part = 1; part <= 7; part++) {
     const pool = poolByPart[part];
     while (pool.length > 0) {
       const q = pool.shift()!;
