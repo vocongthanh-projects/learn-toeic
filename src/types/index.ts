@@ -205,7 +205,7 @@ export interface MockExamAttempt {
   completedAt: number;
 }
 
-export type ViewMode = 'dashboard' | 'knowledge' | 'practice' | 'mock_test' | 'mistake_bank' | 'vocabulary' | 'notes' | 'writing';
+export type ViewMode = 'dashboard' | 'knowledge' | 'practice' | 'mock_test' | 'mistake_bank' | 'vocabulary' | 'notes' | 'writing' | 'speaking';
 
 // ==========================================
 // WRITING (local-only feature — scored by a local LLM via Ollama, dev environment only)
@@ -236,6 +236,41 @@ export interface WritingAttempt {
   feedback?: string;
   score?: number;
   maxScore: number;
+  model: string;
+  createdAt: number;
+}
+
+// ==========================================
+// SPEAKING (local-only feature — ASR via whisper-server, pronunciation via OpenPronounce,
+// content feedback via Ollama. Dev environment only, same as Writing.)
+// ==========================================
+export type SpeakingTaskType = 1 | 2 | 3; // 1: Read Aloud, 2: Describe a picture, 3: Express an opinion / propose a solution
+
+export interface SpeakingPrompt {
+  id: string;
+  taskType: SpeakingTaskType;
+  title: string;
+  // Task 1: read this exact text aloud — pronunciation is scored against it
+  readAloudText?: string;
+  // Task 2: describe the picture
+  image?: string;
+  // Task 3: opinion / solution topic
+  topic?: string;
+  prepSeconds: number;
+  responseSeconds: number;
+}
+
+export interface SpeakingAttempt {
+  id: string; // e.g. "speaking_${userId}_${timestamp}"
+  userId: string;
+  promptId: string;
+  taskType: SpeakingTaskType;
+  transcript: string;
+  pronunciationScore?: number; // 0-100, Task 1 only (needs a known reference text)
+  mispronouncedWords?: string[];
+  contentFeedback?: string;
+  contentScore?: number;
+  maxContentScore: number;
   model: string;
   createdAt: number;
 }

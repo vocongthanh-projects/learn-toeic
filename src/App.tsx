@@ -16,6 +16,7 @@ const VocabularyView = lazy(() => import('./components/vocabulary/VocabularyView
 const MockTestView = lazy(() => import('./components/exam/MockTestView').then(m => ({ default: m.MockTestView })));
 const NotesView = lazy(() => import('./components/notes/NotesView').then(m => ({ default: m.NotesView })));
 const WritingView = lazy(() => import('./components/writing/WritingView').then(m => ({ default: m.WritingView })));
+const SpeakingView = lazy(() => import('./components/speaking/SpeakingView').then(m => ({ default: m.SpeakingView })));
 
 function ViewLoadingFallback() {
   return (
@@ -116,6 +117,11 @@ export function App() {
     [activeUserId]
   ) || [];
 
+  const userSpeakingAttempts = useLiveQuery(
+    () => db.speakingAttempts.where('userId').equals(activeUserId).toArray(),
+    [activeUserId]
+  ) || [];
+
 
   // Active user profile object
   const activeProfile: UserProfile = profiles.find(p => p.id === activeUserId) || DEFAULT_PROFILES[0];
@@ -151,6 +157,7 @@ export function App() {
       await db.notes.clear();
       await db.mockExamAttempts.clear();
       await db.writingAttempts.clear();
+      await db.speakingAttempts.clear();
       await seedSampleDataIfEmpty();
       handleClearDrill();
       handleNavigateView('dashboard');
@@ -290,6 +297,13 @@ export function App() {
           <WritingView
             userId={activeUserId}
             writingAttempts={userWritingAttempts}
+          />
+        )}
+
+        {currentView === 'speaking' && (
+          <SpeakingView
+            userId={activeUserId}
+            speakingAttempts={userSpeakingAttempts}
           />
         )}
         </Suspense>

@@ -15,7 +15,8 @@ import {
   Pencil,
   Download,
   Upload,
-  PenSquare
+  PenSquare,
+  Mic
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -116,6 +117,11 @@ export const Header: React.FC<HeaderProps> = ({
       id: 'writing',
       label: 'Writing',
       icon: <PenSquare className="w-4 h-4 text-purple-600" />
+    },
+    {
+      id: 'speaking',
+      label: 'Speaking',
+      icon: <Mic className="w-4 h-4 text-rose-600" />
     }
   ];
 

@@ -33,3 +33,6 @@ dist-ssr
 
 # local Claude Code state
 .claude
+
+# stray temp files from local whisper-server runs
+whisper-server-*.wav*

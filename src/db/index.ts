@@ -1,5 +1,5 @@
 import Dexie, { type Table } from 'dexie';
-import type { Attempt, SrsItem, VocabularyItem, UserProfile, CognitiveStatus, ConfidenceLevel, UserNote, MockExamAttempt, WritingAttempt } from '../types';
+import type { Attempt, SrsItem, VocabularyItem, UserProfile, CognitiveStatus, ConfidenceLevel, UserNote, MockExamAttempt, WritingAttempt, SpeakingAttempt } from '../types';
 
 export const DEFAULT_PROFILES: UserProfile[] = [
   {
@@ -25,6 +25,7 @@ export class ToeicDatabase extends Dexie {
   notes!: Table<UserNote, string>;
   mockExamAttempts!: Table<MockExamAttempt, string>;
   writingAttempts!: Table<WritingAttempt, string>;
+  speakingAttempts!: Table<SpeakingAttempt, string>;
 
   constructor() {
     super('ToeicMasteryDB_v1');
@@ -44,6 +45,9 @@ export class ToeicDatabase extends Dexie {
     });
     this.version(3).stores({
       writingAttempts: 'id, userId, promptId, taskType, createdAt'
+    });
+    this.version(4).stores({
+      speakingAttempts: 'id, userId, promptId, taskType, createdAt'
     });
   }
 }
@@ -424,6 +428,17 @@ export async function deleteWritingAttempt(id: string): Promise<void> {
   await db.writingAttempts.delete(id);
 }
 
+// ==========================================
+// SPEAKING OPERATIONS
+// ==========================================
+export async function saveSpeakingAttempt(attempt: SpeakingAttempt): Promise<void> {
+  await db.speakingAttempts.put(attempt);
+}
+
+export async function deleteSpeakingAttempt(id: string): Promise<void> {
+  await db.speakingAttempts.delete(id);
+}
+
 // Ensure the default profiles exist without ever overwriting a name the user has customized.
 export async function seedSampleDataIfEmpty() {
   try {
@@ -458,17 +473,19 @@ export interface DatabaseBackup {
   notes: UserNote[];
   mockExamAttempts: MockExamAttempt[];
   writingAttempts: WritingAttempt[];
+  speakingAttempts: SpeakingAttempt[];
 }
 
 export async function exportDatabase(): Promise<DatabaseBackup> {
-  const [attempts, srsItems, vocabulary, userProfiles, notes, mockExamAttempts, writingAttempts] = await Promise.all([
+  const [attempts, srsItems, vocabulary, userProfiles, notes, mockExamAttempts, writingAttempts, speakingAttempts] = await Promise.all([
     db.attempts.toArray(),
     db.srsItems.toArray(),
     db.vocabulary.toArray(),
     db.userProfiles.toArray(),
     db.notes.toArray(),
     db.mockExamAttempts.toArray(),
-    db.writingAttempts.toArray()
+    db.writingAttempts.toArray(),
+    db.speakingAttempts.toArray()
   ]);
 
   return {
@@ -480,7 +497,8 @@ export async function exportDatabase(): Promise<DatabaseBackup> {
     userProfiles,
     notes,
     mockExamAttempts,
-    writingAttempts
+    writingAttempts,
+    speakingAttempts
   };
 }
 
@@ -491,7 +509,7 @@ export async function importDatabase(backup: DatabaseBackup): Promise<void> {
 
   await db.transaction(
     'rw',
-    [db.attempts, db.srsItems, db.vocabulary, db.userProfiles, db.notes, db.mockExamAttempts, db.writingAttempts],
+    [db.attempts, db.srsItems, db.vocabulary, db.userProfiles, db.notes, db.mockExamAttempts, db.writingAttempts, db.speakingAttempts],
     async () => {
       await Promise.all([
         db.attempts.clear(),
@@ -500,7 +518,8 @@ export async function importDatabase(backup: DatabaseBackup): Promise<void> {
         db.userProfiles.clear(),
         db.notes.clear(),
         db.mockExamAttempts.clear(),
-        db.writingAttempts.clear()
+        db.writingAttempts.clear(),
+        db.speakingAttempts.clear()
       ]);
 
       await Promise.all([
@@ -510,7 +529,8 @@ export async function importDatabase(backup: DatabaseBackup): Promise<void> {
         db.userProfiles.bulkPut(backup.userProfiles?.length > 0 ? backup.userProfiles : DEFAULT_PROFILES),
         backup.notes?.length > 0 ? db.notes.bulkPut(backup.notes) : Promise.resolve(),
         backup.mockExamAttempts?.length > 0 ? db.mockExamAttempts.bulkPut(backup.mockExamAttempts) : Promise.resolve(),
-        backup.writingAttempts?.length > 0 ? db.writingAttempts.bulkPut(backup.writingAttempts) : Promise.resolve()
+        backup.writingAttempts?.length > 0 ? db.writingAttempts.bulkPut(backup.writingAttempts) : Promise.resolve(),
+        backup.speakingAttempts?.length > 0 ? db.speakingAttempts.bulkPut(backup.speakingAttempts) : Promise.resolve()
       ]);
     }
   );
