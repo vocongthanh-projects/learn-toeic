@@ -284,7 +284,7 @@ export const SpeakingView: React.FC<SpeakingViewProps> = ({ userId, speakingAtte
             </span>
 
             {audioUrl && recordState !== 'recording' && (
-              <audio controls src={audioUrl} className="h-9" />
+              <audio controls src={audioUrl} className="w-full max-w-sm h-9" />
             )}
 
             {audioUrl && recordState === 'recorded' && !contentResult && (
@@ -346,7 +346,7 @@ export const SpeakingView: React.FC<SpeakingViewProps> = ({ userId, speakingAtte
           </h3>
           <div className="space-y-2">
             {recentAttempts.map(a => (
-              <div key={a.id} className="flex items-center justify-between text-xs p-3 rounded-xl bg-slate-50 border border-slate-200">
+              <div key={a.id} className="flex items-center justify-between flex-wrap gap-x-3 gap-y-1 text-xs p-3 rounded-xl bg-slate-50 border border-slate-200">
                 <span className="text-slate-600">{TASK_LABELS[a.taskType]} · {new Date(a.createdAt).toLocaleString('vi-VN')}</span>
                 <span className="font-bold text-rose-700">
                   {a.pronunciationScore !== undefined ? `Phát âm ${a.pronunciationScore}/100 · ` : ''}

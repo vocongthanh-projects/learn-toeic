@@ -138,14 +138,9 @@ export const Header: React.FC<HeaderProps> = ({
               <Target className="w-5 h-5 text-white" />
             </div>
             <div>
-              <div className="flex items-center gap-1.5">
-                <span className="font-bold text-sm sm:text-base text-slate-900 whitespace-nowrap">
-                  TOEIC Adaptive
-                </span>
-                <span className="text-[9px] uppercase font-bold px-1.5 py-0.5 bg-blue-50 text-blue-700 border border-blue-200 rounded-full whitespace-nowrap">
-                  Study4 Style
-                </span>
-              </div>
+              <span className="font-bold text-sm sm:text-base text-slate-900 whitespace-nowrap block">
+                TOEIC Adaptive
+              </span>
               <p className="text-[10px] text-slate-500 hidden xl:block whitespace-nowrap">Học thông minh • Trị bẫy tư duy</p>
             </div>
           </div>
@@ -280,6 +275,31 @@ export const Header: React.FC<HeaderProps> = ({
                         </div>
                       );
                     })}
+
+                    {/* Data actions — mobile only here (icon buttons handle it on sm+), so nothing is lost on small screens */}
+                    <div className="sm:hidden pt-1 mt-1 border-t border-slate-100 space-y-1">
+                      <button
+                        onClick={() => { onExportData(); setShowProfileMenu(false); }}
+                        className="w-full flex items-center gap-2 p-2 rounded-xl text-left text-slate-700 hover:bg-slate-50"
+                      >
+                        <Download className="w-3.5 h-3.5 text-slate-400" />
+                        <span>Xuất dữ liệu (sao lưu)</span>
+                      </button>
+                      <button
+                        onClick={() => { importInputRef.current?.click(); setShowProfileMenu(false); }}
+                        className="w-full flex items-center gap-2 p-2 rounded-xl text-left text-slate-700 hover:bg-slate-50"
+                      >
+                        <Upload className="w-3.5 h-3.5 text-slate-400" />
+                        <span>Nhập dữ liệu</span>
+                      </button>
+                      <button
+                        onClick={() => { onResetData(); setShowProfileMenu(false); }}
+                        className="w-full flex items-center gap-2 p-2 rounded-xl text-left text-rose-600 hover:bg-rose-50"
+                      >
+                        <RotateCcw className="w-3.5 h-3.5" />
+                        <span>Xóa toàn bộ dữ liệu</span>
+                      </button>
+                    </div>
                   </div>
                 </>
               )}
@@ -290,7 +310,7 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={onExportData}
               title="Xuất dữ liệu (sao lưu JSON)"
               aria-label="Xuất dữ liệu"
-              className="flex items-center gap-1 px-2.5 py-1.5 text-xs text-slate-500 hover:text-blue-600 bg-slate-100 hover:bg-blue-50 border border-slate-200 rounded-xl transition-all"
+              className="hidden sm:flex items-center gap-1 px-2.5 py-1.5 text-xs text-slate-500 hover:text-blue-600 bg-slate-100 hover:bg-blue-50 border border-slate-200 rounded-xl transition-all"
             >
               <Download className="w-3.5 h-3.5" />
             </button>
@@ -307,7 +327,7 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={() => importInputRef.current?.click()}
               title="Nhập dữ liệu từ file sao lưu"
               aria-label="Nhập dữ liệu"
-              className="flex items-center gap-1 px-2.5 py-1.5 text-xs text-slate-500 hover:text-blue-600 bg-slate-100 hover:bg-blue-50 border border-slate-200 rounded-xl transition-all"
+              className="hidden sm:flex items-center gap-1 px-2.5 py-1.5 text-xs text-slate-500 hover:text-blue-600 bg-slate-100 hover:bg-blue-50 border border-slate-200 rounded-xl transition-all"
             >
               <Upload className="w-3.5 h-3.5" />
             </button>
@@ -317,7 +337,7 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={onResetData}
               title="Xóa toàn bộ dữ liệu"
               aria-label="Xóa toàn bộ dữ liệu"
-              className="flex items-center gap-1 px-2.5 py-1.5 text-xs text-slate-500 hover:text-rose-600 bg-slate-100 hover:bg-rose-50 border border-slate-200 rounded-xl transition-all"
+              className="hidden sm:flex items-center gap-1 px-2.5 py-1.5 text-xs text-slate-500 hover:text-rose-600 bg-slate-100 hover:bg-rose-50 border border-slate-200 rounded-xl transition-all"
             >
               <RotateCcw className="w-3.5 h-3.5" />
             </button>
@@ -325,19 +345,23 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         {/* Mobile Nav */}
-        <div className="flex md:hidden items-center justify-between py-2 border-t border-slate-200 text-xs overflow-x-auto gap-1">
-          {navItems.map(item => (
-            <button
-              key={item.id}
-              onClick={() => onViewChange(item.id)}
-              className={`flex flex-col items-center gap-1 py-1 px-2 rounded-lg ${
-                currentView === item.id ? 'text-blue-600 font-bold' : 'text-slate-600'
-              }`}
-            >
-              {item.icon}
-              <span className="text-[11px] whitespace-nowrap">{item.label}</span>
-            </button>
-          ))}
+        <div className="md:hidden relative border-t border-slate-200">
+          <div className="flex items-center py-2 text-xs overflow-x-auto gap-1 scrollbar-none">
+            {navItems.map(item => (
+              <button
+                key={item.id}
+                onClick={() => onViewChange(item.id)}
+                className={`flex flex-col items-center gap-1 py-1 px-2 rounded-lg shrink-0 ${
+                  currentView === item.id ? 'text-blue-600 font-bold' : 'text-slate-600'
+                }`}
+              >
+                {item.icon}
+                <span className="text-[11px] whitespace-nowrap">{item.label}</span>
+              </button>
+            ))}
+          </div>
+          {/* Fade hint that the tab strip scrolls further right */}
+          <div className="pointer-events-none absolute top-0 right-0 h-full w-8 bg-gradient-to-l from-white to-transparent" />
         </div>
       </div>
     </header>

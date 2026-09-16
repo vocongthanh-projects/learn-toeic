@@ -275,8 +275,9 @@ export const PracticeView: React.FC<PracticeViewProps> = ({
       {/* 1. TOP NAVIGATION: PART SELECTOR & TEST FILTER */}
       <div className="bg-white border border-slate-200 rounded-3xl p-4 shadow-xs space-y-3">
         {/* Part Tabs Bar */}
-        <div className="flex items-center justify-between gap-2 overflow-x-auto pb-1 scrollbar-none">
-          <div className="flex items-center gap-1.5 shrink-0">
+        <div className="flex items-center gap-2">
+          <div className="relative min-w-0 flex-1">
+            <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
             <button
               type="button"
               onClick={() => handleSelectPart(null)}
@@ -314,6 +315,9 @@ export const PracticeView: React.FC<PracticeViewProps> = ({
                 </button>
               );
             })}
+            </div>
+            {/* Fade hint that the part-tabs strip scrolls further right */}
+            <div className="pointer-events-none absolute top-0 right-0 h-full w-8 bg-gradient-to-l from-white to-transparent" />
           </div>
 
           {/* Question List Drawer trigger */}
