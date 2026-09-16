@@ -58,6 +58,41 @@ def synth_single(text: str, accent: str, mp3_path: str):
     seg.export(mp3_path, format="mp3", bitrate="64k")
 
 
+OPTION_LABEL_RE = re.compile(r"\b([ABCD])\.\s+")
+
+
+def synth_part1_options(text: str, accent: str, mp3_path: str):
+    # Split "A. sentence B. sentence C. sentence D. sentence" into 4 separate statements and
+    # synthesize each on its own, with a real pause between — one continuous MeloTTS call over
+    # all 4 ran them together with barely a breath in between, which read as an unnaturally
+    # fast, run-on wall of speech compared to real Part 1 audio (which pauses ~1s between options).
+    parts = OPTION_LABEL_RE.split(text)
+    options = []
+    i = 1
+    while i < len(parts) - 1:
+        label = parts[i]
+        option_text = parts[i + 1].strip()
+        if option_text:
+            options.append((label, option_text))
+        i += 2
+
+    if not options:
+        synth_single(text, accent, mp3_path)
+        return
+
+    combined = AudioSegment.silent(duration=300)
+    pause = AudioSegment.silent(duration=900)
+    for idx, (label, option_text) in enumerate(options):
+        tmp_wav = os.path.join(TMP_DIR, f"p1opt_{idx}.wav")
+        synth(f"{label}. {option_text}", accent, tmp_wav)
+        seg = AudioSegment.from_wav(tmp_wav)
+        combined += seg
+        if idx < len(options) - 1:
+            combined += pause
+
+    combined.export(mp3_path, format="mp3", bitrate="64k")
+
+
 SPEAKER_TURN_RE = re.compile(r"([WM]):\s*")
 
 
@@ -117,7 +152,10 @@ def main():
             continue
         try:
             accent = random.choice(ACCENTS)
-            synth_single(q["transcript"], accent, mp3_path)
+            if q["part"] == 1:
+                synth_part1_options(q["transcript"], accent, mp3_path)
+            else:
+                synth_single(q["transcript"], accent, mp3_path)
             q["audioUrl"] = rel_url
             generated += 1
         except Exception as e:

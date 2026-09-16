@@ -484,8 +484,14 @@ export const PracticeView: React.FC<PracticeViewProps> = ({
         </div>
 
         {/* Options Grid */}
+        {(currentQuestion.part === 1 || currentQuestion.part === 2) && !submitted && (
+          <p className="text-[11px] text-indigo-600 bg-indigo-50 border border-indigo-200 rounded-xl px-3 py-2 -mt-1">
+            🎧 Đúng chuẩn thi thật: đáp án chỉ được đọc trong audio, không hiện chữ cho tới khi bạn nộp bài — hãy nghe kỹ trước khi chọn.
+          </p>
+        )}
         <div className="grid gap-3 pt-2 grid-cols-1 sm:grid-cols-2">
               {currentQuestion.options.map(opt => {
+                const hideText = (currentQuestion.part === 1 || currentQuestion.part === 2) && !submitted;
                 const isSelected = selectedOption === opt.key;
                 const isCorrect = opt.key === currentQuestion.correctAnswer;
                 
@@ -523,7 +529,9 @@ export const PracticeView: React.FC<PracticeViewProps> = ({
                       {opt.key}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <span className="text-sm">{opt.text}</span>
+                      <span className={`text-sm ${hideText ? 'italic text-slate-400' : ''}`}>
+                        {hideText ? 'Nghe audio để chọn đáp án' : opt.text}
+                      </span>
                     </div>
                   </button>
                 );
