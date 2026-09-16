@@ -15,6 +15,7 @@ const MistakeBankView = lazy(() => import('./components/mistakes/MistakeBankView
 const VocabularyView = lazy(() => import('./components/vocabulary/VocabularyView').then(m => ({ default: m.VocabularyView })));
 const MockTestView = lazy(() => import('./components/exam/MockTestView').then(m => ({ default: m.MockTestView })));
 const NotesView = lazy(() => import('./components/notes/NotesView').then(m => ({ default: m.NotesView })));
+const WritingView = lazy(() => import('./components/writing/WritingView').then(m => ({ default: m.WritingView })));
 
 function ViewLoadingFallback() {
   return (
@@ -110,6 +111,11 @@ export function App() {
     [activeUserId]
   ) || [];
 
+  const userWritingAttempts = useLiveQuery(
+    () => db.writingAttempts.where('userId').equals(activeUserId).toArray(),
+    [activeUserId]
+  ) || [];
+
 
   // Active user profile object
   const activeProfile: UserProfile = profiles.find(p => p.id === activeUserId) || DEFAULT_PROFILES[0];
@@ -144,6 +150,7 @@ export function App() {
       await db.vocabulary.clear();
       await db.notes.clear();
       await db.mockExamAttempts.clear();
+      await db.writingAttempts.clear();
       await seedSampleDataIfEmpty();
       handleClearDrill();
       handleNavigateView('dashboard');
@@ -276,6 +283,13 @@ export function App() {
             userName={activeProfile.name}
             notes={userNotes}
             onStartDrill={handleStartDrill}
+          />
+        )}
+
+        {currentView === 'writing' && (
+          <WritingView
+            userId={activeUserId}
+            writingAttempts={userWritingAttempts}
           />
         )}
         </Suspense>

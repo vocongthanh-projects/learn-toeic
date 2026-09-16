@@ -1,5 +1,5 @@
 import Dexie, { type Table } from 'dexie';
-import type { Attempt, SrsItem, VocabularyItem, UserProfile, CognitiveStatus, ConfidenceLevel, UserNote, MockExamAttempt } from '../types';
+import type { Attempt, SrsItem, VocabularyItem, UserProfile, CognitiveStatus, ConfidenceLevel, UserNote, MockExamAttempt, WritingAttempt } from '../types';
 
 export const DEFAULT_PROFILES: UserProfile[] = [
   {
@@ -24,6 +24,7 @@ export class ToeicDatabase extends Dexie {
   userProfiles!: Table<UserProfile, string>;
   notes!: Table<UserNote, string>;
   mockExamAttempts!: Table<MockExamAttempt, string>;
+  writingAttempts!: Table<WritingAttempt, string>;
 
   constructor() {
     super('ToeicMasteryDB_v1');
@@ -40,6 +41,9 @@ export class ToeicDatabase extends Dexie {
       userProfiles: 'id, name',
       notes: 'id, userId, questionId, part, createdAt, updatedAt',
       mockExamAttempts: 'id, userId, testId, completedAt'
+    });
+    this.version(3).stores({
+      writingAttempts: 'id, userId, promptId, taskType, createdAt'
     });
   }
 }
@@ -409,6 +413,17 @@ export async function deleteMockExamAttempt(id: string): Promise<void> {
   await db.mockExamAttempts.delete(id);
 }
 
+// ==========================================
+// WRITING OPERATIONS
+// ==========================================
+export async function saveWritingAttempt(attempt: WritingAttempt): Promise<void> {
+  await db.writingAttempts.put(attempt);
+}
+
+export async function deleteWritingAttempt(id: string): Promise<void> {
+  await db.writingAttempts.delete(id);
+}
+
 // Ensure the default profiles exist without ever overwriting a name the user has customized.
 export async function seedSampleDataIfEmpty() {
   try {
@@ -442,16 +457,18 @@ export interface DatabaseBackup {
   userProfiles: UserProfile[];
   notes: UserNote[];
   mockExamAttempts: MockExamAttempt[];
+  writingAttempts: WritingAttempt[];
 }
 
 export async function exportDatabase(): Promise<DatabaseBackup> {
-  const [attempts, srsItems, vocabulary, userProfiles, notes, mockExamAttempts] = await Promise.all([
+  const [attempts, srsItems, vocabulary, userProfiles, notes, mockExamAttempts, writingAttempts] = await Promise.all([
     db.attempts.toArray(),
     db.srsItems.toArray(),
     db.vocabulary.toArray(),
     db.userProfiles.toArray(),
     db.notes.toArray(),
-    db.mockExamAttempts.toArray()
+    db.mockExamAttempts.toArray(),
+    db.writingAttempts.toArray()
   ]);
 
   return {
@@ -462,7 +479,8 @@ export async function exportDatabase(): Promise<DatabaseBackup> {
     vocabulary,
     userProfiles,
     notes,
-    mockExamAttempts
+    mockExamAttempts,
+    writingAttempts
   };
 }
 
@@ -473,7 +491,7 @@ export async function importDatabase(backup: DatabaseBackup): Promise<void> {
 
   await db.transaction(
     'rw',
-    [db.attempts, db.srsItems, db.vocabulary, db.userProfiles, db.notes, db.mockExamAttempts],
+    [db.attempts, db.srsItems, db.vocabulary, db.userProfiles, db.notes, db.mockExamAttempts, db.writingAttempts],
     async () => {
       await Promise.all([
         db.attempts.clear(),
@@ -481,7 +499,8 @@ export async function importDatabase(backup: DatabaseBackup): Promise<void> {
         db.vocabulary.clear(),
         db.userProfiles.clear(),
         db.notes.clear(),
-        db.mockExamAttempts.clear()
+        db.mockExamAttempts.clear(),
+        db.writingAttempts.clear()
       ]);
 
       await Promise.all([
@@ -490,7 +509,8 @@ export async function importDatabase(backup: DatabaseBackup): Promise<void> {
         backup.vocabulary?.length > 0 ? db.vocabulary.bulkPut(backup.vocabulary) : Promise.resolve(),
         db.userProfiles.bulkPut(backup.userProfiles?.length > 0 ? backup.userProfiles : DEFAULT_PROFILES),
         backup.notes?.length > 0 ? db.notes.bulkPut(backup.notes) : Promise.resolve(),
-        backup.mockExamAttempts?.length > 0 ? db.mockExamAttempts.bulkPut(backup.mockExamAttempts) : Promise.resolve()
+        backup.mockExamAttempts?.length > 0 ? db.mockExamAttempts.bulkPut(backup.mockExamAttempts) : Promise.resolve(),
+        backup.writingAttempts?.length > 0 ? db.writingAttempts.bulkPut(backup.writingAttempts) : Promise.resolve()
       ]);
     }
   );

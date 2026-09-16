@@ -14,7 +14,8 @@ import {
   FileText,
   Pencil,
   Download,
-  Upload
+  Upload,
+  PenSquare
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -110,6 +111,11 @@ export const Header: React.FC<HeaderProps> = ({
       icon: <FileText className="w-4 h-4 text-teal-600" />,
       badge: notesCount,
       badgeColor: 'bg-teal-50 text-teal-600 border-teal-200'
+    },
+    {
+      id: 'writing',
+      label: 'Writing',
+      icon: <PenSquare className="w-4 h-4 text-purple-600" />
     }
   ];
 

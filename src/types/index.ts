@@ -205,5 +205,38 @@ export interface MockExamAttempt {
   completedAt: number;
 }
 
-export type ViewMode = 'dashboard' | 'knowledge' | 'practice' | 'mock_test' | 'mistake_bank' | 'vocabulary' | 'notes';
+export type ViewMode = 'dashboard' | 'knowledge' | 'practice' | 'mock_test' | 'mistake_bank' | 'vocabulary' | 'notes' | 'writing';
+
+// ==========================================
+// WRITING (local-only feature — scored by a local LLM via Ollama, dev environment only)
+// ==========================================
+export type WritingTaskType = 1 | 2 | 3;
+
+export interface WritingPrompt {
+  id: string;
+  taskType: WritingTaskType;
+  title: string;
+  minWords: number;
+  // Task 1: picture + 2 required words
+  image?: string;
+  requiredWords?: [string, string];
+  // Task 2: respond to an email, addressing required points
+  emailContent?: string;
+  requiredPoints?: string[];
+  // Task 3: opinion essay
+  essayTopic?: string;
+}
+
+export interface WritingAttempt {
+  id: string; // e.g. "writing_${userId}_${timestamp}"
+  userId: string;
+  promptId: string;
+  taskType: WritingTaskType;
+  userAnswer: string;
+  feedback?: string;
+  score?: number;
+  maxScore: number;
+  model: string;
+  createdAt: number;
+}
 
