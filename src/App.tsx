@@ -4,7 +4,8 @@ import { db, seedSampleDataIfEmpty, DEFAULT_PROFILES, renameUserProfile, exportD
 import type { ViewMode, UserProfile } from './types';
 
 import { SAMPLE_QUESTIONS } from './data/questions';
-import { Header } from './components/layout/Header';
+import { Sidebar } from './components/layout/Sidebar';
+import { MobileNav } from './components/layout/MobileNav';
 
 // Each tab is loaded on demand, so switching views doesn't require downloading
 // every other view's code up front.
@@ -26,9 +27,11 @@ function ViewLoadingFallback() {
   );
 }
 
-const LOCAL_STORAGE_USER_KEY = 'toeic_active_user_id';
 const LOCAL_STORAGE_VIEW_KEY = 'toeic_active_view';
 const LOCAL_STORAGE_DRILL_KEY = 'toeic_active_drill';
+
+// This app is designed for a single local user per browser — no profile switching needed.
+const ACTIVE_USER_ID = 'user_1';
 
 export function App() {
   const [currentView, setCurrentView] = useState<ViewMode>(() => {
@@ -42,11 +45,7 @@ export function App() {
       return null;
     }
   });
-  
-  // Persistent active user ID across reload / F5
-  const [activeUserId, setActiveUserId] = useState<string>(() => {
-    return localStorage.getItem(LOCAL_STORAGE_USER_KEY) || 'user_1';
-  });
+  const activeUserId = ACTIVE_USER_ID;
 
   const handleNavigateView = (view: ViewMode) => {
     if (view !== 'practice') {
@@ -61,13 +60,6 @@ export function App() {
   useEffect(() => {
     seedSampleDataIfEmpty();
   }, []);
-
-  // Update localStorage when user switches profile
-  const handleSelectProfile = (userId: string) => {
-    setActiveUserId(userId);
-    localStorage.setItem(LOCAL_STORAGE_USER_KEY, userId);
-    setActiveDrill(null); // reset active drill when switching user
-  };
 
   // Reactive queries from IndexedDB scoped strictly by activeUserId
   const profiles = useLiveQuery(
@@ -164,7 +156,7 @@ export function App() {
     }
   };
 
-  // Rename active profile (profiles ship with generic names since this app is public)
+  // Rename the local profile (defaults to a generic name since this app is public)
   const handleRenameProfile = async (profileId: string, name: string) => {
     await renameUserProfile(profileId, name);
   };
@@ -201,10 +193,9 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col font-sans selection:bg-blue-600 selection:text-white">
-      {/* Top Header */}
-
-      <Header
+    <div className="min-h-screen bg-slate-50 text-slate-800 flex font-sans selection:bg-blue-600 selection:text-white">
+      {/* Desktop sidebar navigation */}
+      <Sidebar
         currentView={currentView}
         onViewChange={(view) => {
           handleNavigateView(view);
@@ -213,16 +204,29 @@ export function App() {
         vocabCount={vocabCount}
         notesCount={userNotes.length}
         activeProfile={activeProfile}
-        profiles={profiles}
-        onSelectProfile={handleSelectProfile}
         onRenameProfile={handleRenameProfile}
         onResetData={handleResetData}
         onExportData={handleExportData}
         onImportData={handleImportData}
       />
 
-      {/* Main Content Area */}
-      <main className="flex-1 pb-16">
+      <div className="flex-1 min-w-0 flex flex-col">
+        {/* Mobile top bar + tab strip */}
+        <MobileNav
+          currentView={currentView}
+          onViewChange={(view) => {
+            handleNavigateView(view);
+          }}
+          mistakeCount={mistakeCount}
+          vocabCount={vocabCount}
+          notesCount={userNotes.length}
+          onResetData={handleResetData}
+          onExportData={handleExportData}
+          onImportData={handleImportData}
+        />
+
+        {/* Main Content Area */}
+        <main className="flex-1">
         <Suspense fallback={<ViewLoadingFallback />}>
         {currentView === 'dashboard' && (
           <DashboardView
@@ -307,17 +311,18 @@ export function App() {
           />
         )}
         </Suspense>
-      </main>
+        </main>
 
-      {/* Footer */}
-      <footer className="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-500">
-        <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span>🎯 TOEIC Adaptive Studio — Local-First Personal Mastery Engine</span>
-          <span className="text-[11px] text-slate-500">
-            Hồ sơ hiện tại: <strong className="text-slate-800">{activeProfile.name}</strong> • Dữ liệu lưu cục bộ trong trình duyệt này — nhớ xuất dữ liệu để sao lưu
-          </span>
-        </div>
-      </footer>
+        {/* Footer */}
+        <footer className="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-500">
+          <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+            <span>🎯 TOEIC Adaptive Studio — Local-First Personal Mastery Engine</span>
+            <span className="text-[11px] text-slate-500">
+              Hồ sơ hiện tại: <strong className="text-slate-800">{activeProfile.name}</strong> • Dữ liệu lưu cục bộ trong trình duyệt này — nhớ xuất dữ liệu để sao lưu
+            </span>
+          </div>
+        </footer>
+      </div>
     </div>
   );
 }

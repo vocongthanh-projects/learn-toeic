@@ -4,14 +4,8 @@ import type { Attempt, SrsItem, VocabularyItem, UserProfile, CognitiveStatus, Co
 export const DEFAULT_PROFILES: UserProfile[] = [
   {
     id: 'user_1',
-    name: 'Học viên 1',
+    name: 'Học viên',
     avatarBg: 'from-indigo-500 to-purple-600',
-    role: 'Đang luyện thi TOEIC'
-  },
-  {
-    id: 'user_2',
-    name: 'Học viên 2',
-    avatarBg: 'from-emerald-500 to-teal-600',
     role: 'Đang luyện thi TOEIC'
   }
 ];
